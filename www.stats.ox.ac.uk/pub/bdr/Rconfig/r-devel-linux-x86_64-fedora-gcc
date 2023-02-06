@@ -1,0 +1,88 @@
+R-devel
+x86_64 Fedora 36 Linux
+GCC 12.2 (C, C++, Fortran)
+Timezone Europe/London
+Locale en_GB.UTF-8, LC_COLLATE=C
+
+configured with no options, config.site:
+
+CFLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection -Werror=implicit-function-declaration -Wstrict-prototypes"
+FFLAGS="-g -O2 -mtune=native -Wall -pedantic"
+CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-parentheses -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection"
+JAVA_HOME=/usr/lib/jvm/java-11
+
+The -Wno flags reduce the deluge of warnings from Boost and Eigen headers.
+The security flags follow Fedora. -Werror=implicit-function-declaration
+gives stricter C99 compliance as used on macOS.
+
+Configured with --enable-lto-R and adding
+
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LTO=-flto=10
+
+to config.site, so R and recoomended packages are built with LTO and
+are slightly smaller and faster.
+
+This uses the system LAPACK, which is currently 3.10.1.
+
+Java 11 (Fedora 36's 11.0.17) is used.
+
+A local TexLive is used, updated nightly, currently 2022.
+
+Fedora's build of pandoc (currently 2.14.0.3) is used.
+
+JAGS-4.3.1 was installed from source.
+OpenBUGS-3.2.3 is installed using Fedora's i686 toolchain.
+TkTable 2.10 was installed from source.
+
+With the system PROJ there are frequent hangs in package checks,
+worked around by installing the same versions of GDAL and PROJ from
+their sources.
+
+This is currently using the environment variables
+
+setenv _R_CHECK_INSTALL_DEPENDS_ true
+## the next is the default, but --as-cran has true
+setenv _R_CHECK_SUGGESTS_ONLY_ false
+setenv _R_CHECK_NO_RECOMMENDED_ true
+setenv _R_CHECK_DOC_SIZES2_ true
+setenv _R_CHECK_DEPRECATED_DEFUNCT_ true
+setenv _R_CHECK_SCREEN_DEVICE_ warn
+setenv _R_CHECK_REPLACING_IMPORTS_ true
+setenv _R_CHECK_TOPLEVEL_FILES_ true
+setenv _R_CHECK_DOT_FIRSTLIB_ true
+setenv _R_CHECK_RD_LINE_WIDTHS_ true
+setenv _R_CHECK_S3_METHODS_NOT_REGISTERED_ true
+setenv _R_CHECK_OVERWRITE_REGISTERED_S3_METHODS_ true
+setenv _R_CHECK_CODE_USAGE_WITH_ONLY_BASE_ATTACHED_ TRUE
+setenv _R_CHECK_NATIVE_ROUTINE_REGISTRATION_ true
+setenv _R_CHECK_FF_CALLS_ registration
+setenv _R_CHECK_PRAGMAS_ true
+setenv _R_CHECK_COMPILATION_FLAGS_ true
+setenv _R_CHECK_R_DEPENDS_ true
+setenv _R_CHECK_PACKAGES_USED_IN_TESTS_USE_SUBDIRS_ true
+setenv _R_CHECK_PKG_SIZES_ false
+setenv _R_CHECK_SHLIB_OPENMP_FLAGS_ true
+
+setenv _R_CHECK_LIMIT_CORES_ true
+setenv _R_CHECK_LENGTH_1_CONDITION_ package:_R_CHECK_PACKAGE_NAME_,verbose
+#setenv _R_CHECK_LENGTH_1_LOGIC2_ "package:_R_CHECK_PACKAGE_NAME_,verbose"
+setenv _R_S3_METHOD_LOOKUP_BASEENV_AFTER_GLOBALENV_ true
+setenv _R_CHECK_COMPILATION_FLAGS_KNOWN_ "-Wno-deprecated-declarations -Wno-ignored-attributes -Wno-parentheses-Werror=format-security -Wp,-D_FORTIFY_SOURCE=2i -Werror=implicit-function-declaration"
+setenv _R_CHECK_AUTOCONF_ true
+setenv _R_CHECK_THINGS_IN_CHECK_DIR_ true
+setenv _R_CHECK_THINGS_IN_TEMP_DIR_ true
+setenv _R_CHECK_THINGS_IN_TEMP_DIR_EXCLUDE_ "^ompi"
+setenv _R_CHECK_BASHISMS_ true
+setenv _R_CHECK_DEPENDS_ONLY_DATA_ true
+setenv _R_CHECK_MATRIX_DATA_ TRUE
+setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
+setenv _R_CHECK_RD_MATH_RENDERING_ true
+
+Note the _R_CHECK_SUGGESTS_ONLY_ setting, which is different from the
+the Fedora-clang runs.
+
+A parellel make is used and packages are checked in parallel --
+installing or checking a single package may use up to 30 CPUs.
+
