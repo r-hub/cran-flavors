@@ -1,4 +1,4 @@
-Tests as for fedora-clang but using clang 16.0.0rc1 rather than 15.0.7.
+Tests as for fedora-clang but using clang 16.0.0rc2 rather than 15.0.7.
 This is scheduled for release on Mar 7th.
 
 Currently using C23 as the default C standard (but C23 issues are
