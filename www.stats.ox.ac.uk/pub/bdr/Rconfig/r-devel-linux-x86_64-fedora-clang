@@ -1,11 +1,11 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 15.0.7 (C, C++), gfortran 12.2
+clang 16.0.0rc2 (C, C++), gfortran 12.2
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
 2023-02-16 migrating to clang 16.0.0rc2, pro tem adding
--Wno-enum-constexpr-conversion -D_HAS_AUTO_PTR_ETC=0 
+-Wno-error=enum-constexpr-conversion -D_HAS_AUTO_PTR_ETC=0 
 to CXXFLAGS
 
 configured with --without-lapack and config.site:
