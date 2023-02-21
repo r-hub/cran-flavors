@@ -6,7 +6,8 @@ Locale en_GB.UTF-8, LC_COLLATE=C
 
 2023-02-16 migrating to clang 16.0.0rc2, pro tem adding
 -Wno-error=enum-constexpr-conversion -D_HAS_AUTO_PTR_ETC=0 
-to CXXFLAGS
+to CXXFLAGS. (Both needed for Boost: the first for BioC:mzR, the second for 
+several CRAN packages using functional.hpp, often via odeint.hpp.)
 
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic"
@@ -14,7 +15,7 @@ CFLAGS="-O3 -Wall -pedantic"
 FFLAGS="-O2 -mtune=native -Wall -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti"
 CPPFLAGS="-isystem /usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/lib64"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang16/lib -L/usr/local/lib64"
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
@@ -37,7 +38,7 @@ their sources.
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 22.11.0 (earlier versions up to 22.03.0 do not compile with clang
+poppler is 23.02.0 (earlier versions up to 22.03.0 do not compile with clang
 or segfaulted in package checks).
 
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
