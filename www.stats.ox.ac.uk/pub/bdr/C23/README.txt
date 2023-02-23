@@ -5,7 +5,7 @@ CC='clang -std=gnu2x'
 Other details as
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang
 
-[The checks were done with clang 16.0.0rc2, but should be reproducible
+[The checks were done with clang 16.0.0rc, but should be reproducible
 with the current clang 15.0.x.]
 
 Details of the upcoming C23 standard can be found at

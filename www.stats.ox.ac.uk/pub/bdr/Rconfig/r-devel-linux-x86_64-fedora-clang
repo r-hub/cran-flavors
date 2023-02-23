@@ -1,10 +1,10 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 16.0.0rc2 (C, C++), gfortran 12.2
+clang 16.0.0rc3 (C, C++), gfortran 12.2
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
-2023-02-16 migrating to clang 16.0.0rc2, pro tem adding
+2023-02-16 migrating to clang 16.0.0rc, pro tem adding
 -Wno-error=enum-constexpr-conversion -D_HAS_AUTO_PTR_ETC=0 
 to CXXFLAGS. (Both needed for Boost: the first for BioC:mzR, the second for 
 several CRAN packages using functional.hpp, often via odeint.hpp.)
