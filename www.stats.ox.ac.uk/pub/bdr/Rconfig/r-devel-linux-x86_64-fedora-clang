@@ -8,7 +8,7 @@ configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic"
 CFLAGS="-O3 -Wall -pedantic"
 FFLAGS="-O2 -mtune=native -Wall -pedantic"
-CXXFLAGS="-O3 -Wall -pedantic -frtti"
+CXXFLAGS="-O3 -Wall -pedantic -frtti -Wno-error=enum-constexpr-conversion"
 CPPFLAGS="-isystem /usr/local/clang/include"
 LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang16/lib -L/usr/local/lib64"
 
@@ -28,12 +28,13 @@ can use the system builds.
 
 However, with the system PROJ there are frequent hangs in package tests,
 worked around by installing the same versions of GDAL and PROJ from 
-their sources.
+their sources.  2023-03-04: upgraded to GDAL 3.6.2 to avoid ASAN errors
+in the checks of 'sf'.
 
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 23.02.0 (earlier versions up to 22.03.0 do not compile with clang
+poppler is 23.03.0 (earlier versions up to 22.03.0 do not compile with clang
 or segfaulted in package checks).
 
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
@@ -43,8 +44,8 @@ A local TexLive is used, updated nightly, currently 2022.
 
 Java 17.0.5 from Fedora 36 ('java-17-openjdk') is used.
 
-pandoc 3.1 from pandoc's distribution is used: Fedora's 2.14.0.3 (as used
-for the gcc checks) is rather old.
+pandoc 3.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+(as used for the gcc checks) is rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
 with libc++ .
@@ -75,6 +76,8 @@ setenv _R_CHECK_COMPILATION_FLAGS_ true
 setenv _R_CHECK_R_DEPENDS_ true
 setenv _R_CHECK_PACKAGES_USED_IN_TESTS_USE_SUBDIRS_ true
 setenv _R_CHECK_SHLIB_OPENMP_FLAGS_ true
+setenv _R_CHECK_BROWSER_NONINTERACTIVE_ true
+
 setenv _R_CHECK_CODE_ASSIGN_TO_GLOBALENV_ true
 setenv _R_CHECK_CODE_DATA_INTO_GLOBALENV_ true
 setenv _R_CHECK_PKG_SIZES_ true
@@ -89,6 +92,8 @@ setenv _R_CHECK_BASHISMS_ true
 setenv _R_CHECK_ORPHANED_ true
 setenv _R_CHECK_DEPENDS_ONLY_DATA_ true
 setenv _R_CHECK_XREFS_PKGS_ARE_DECLARED_ true
+setenv _R_CHECK_DEPENDS_ONLY_DATA_ true
+
 setenv _R_CHECK_MATRIX_DATA_ TRUE
 setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
