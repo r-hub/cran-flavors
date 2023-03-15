@@ -46,7 +46,7 @@ A local TexLive is used, updated nightly, currently 2022.
 
 Java 17.0.5 from Fedora 36 ('java-17-openjdk') is used.
 
-pandoc 3.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+pandoc 3.1.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 (as used for the gcc checks) is rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
