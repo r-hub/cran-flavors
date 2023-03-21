@@ -13,3 +13,6 @@ they are presumably included by some other header on earlier versions of gcc,
 or by other compilers or platforms.
 
 See also https://gcc.gnu.org/gcc-13/porting_to.html .
+
+Some check results show that gcc 13 is not giving compilation warnings
+that gcc 12 is -- or additional warnings.
