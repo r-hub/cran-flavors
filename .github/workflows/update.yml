@@ -28,7 +28,7 @@ jobs:
           https://cran.r-project.org/web/checks/check_flavors.html
         git add -A .
         if ! git diff --cached --exit-code \
-          -I "^Last updated on [0-9]{4}[-][0-9]{2}[-][0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} CET."; then
+          -I "^Last updated on [0-9]{4}[-][0-9]{2}[-][0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} CES?T."; then
           git commit -m "Update" || echo "No changes to commit"
           git push origin
         else
