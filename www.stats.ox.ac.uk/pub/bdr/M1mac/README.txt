@@ -39,7 +39,7 @@ Java is 17.0.6 from https://adoptium.net
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
 
-ghoatscript is 10.0.0 built from the sources. (MacTeX 2022 provides 9.55.0).
+ghoatscript is 10.0.0 from MacTeX 2023.
 
 There is a testing service for the CRAN M1mac setup at
 https://mac.r-project.org/macbuilder/submit.html

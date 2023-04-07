@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 16.0.0 (C, C++), gfortran 12.2
+clang 16.0.1 (C, C++), gfortran 12.2
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -44,7 +44,7 @@ libcurl was updated to 8.0.1 to test R's support for it.
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
 so packages using it have to arrange to be linked with Fortran.
 
-A local TexLive is used, updated nightly, currently 2022.
+A local TexLive is used, updated nightly, currently 2023.
 
 Java 17.0.5 from Fedora 36 ('java-17-openjdk') is used.
 
