@@ -47,19 +47,19 @@ Some ways in which this may differ from the CRAN checks:
 - Using R-devel not R 4.[12].x
 - timezone is Europe/London not Pacific/Auckland
 - OS and Command Line Tools are kept up-to-date (at present the CRAN
-    check service is running macOS 11 and Xcode/CLT 12).
+    check service is running macOS 11, and Xcode/CLT 12 except for R-devel).
 - Later C/C++ compilers, different flags.
   Apple clang 14.0.3 seems a major update, with many aspects of
-  LLVM clang 16 having been ported.
+    LLVM clang 16 having been ported.
 - External software is (mainly) kept up-to-date -- see above.
     This includes using Java 17 and cmake, currently 3.25.2.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI .
 - 'R' is not on the path -- checking is by 'Rdev'.
 - Package INLA is installed -- requires a binary install on Macs.
 
-Note that Apple has deprecated C functions sprintf and vsprintf in
-macOS 13 SDK: this also affects users of C++.  (And the much less
-commonly used and widely deprecated gets, mktemp and tmpnam.)
+Note that Apple deprecated C functions sprintf and vsprintf in macOS
+13 SDK: this also affects users of C++.  (And the much less commonly
+used and widely deprecated gets, mktemp and tmpnam.)
 
 Packages with non-default installs:
 
