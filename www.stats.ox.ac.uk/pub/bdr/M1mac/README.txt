@@ -44,10 +44,11 @@ https://mac.r-project.org/macbuilder/submit.html
 
 Some ways in which this may differ from the CRAN checks:
 
-- Using R-devel not R 4.[12].x
+- Using R-devel not R 4.[123].x
 - timezone is Europe/London not Pacific/Auckland
 - OS and Command Line Tools are kept up-to-date (at present the CRAN
     check service is running macOS 11, and Xcode/CLT 12 except for R-devel).
+    However, the M1 mac-builder is running macOS 13 and CLT 14.3.
 - Later C/C++ compilers, different flags.
   Apple clang 14.0.3 seems a major update, with many aspects of
     LLVM clang 16 having been ported.
