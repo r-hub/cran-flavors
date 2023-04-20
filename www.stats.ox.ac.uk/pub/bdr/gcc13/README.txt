@@ -1,7 +1,5 @@
 Tests as for fedora-gcc but with GCC trunk aka pre-13.0.0 -- the
-logs record the snapshot used..
-
-2023-01-18: gcc 13 is now nearing release.
+logs record the snapshot used.  Release is expected ca Apr 26.
 
 Further details as 
 

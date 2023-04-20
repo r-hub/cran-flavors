@@ -32,7 +32,7 @@ setenv R_DONT_USE_TK true
 
 
 gcc-ASAN, gcc-UBSAN:
-gcc 12.2 with config.site:
+gcc 13.1-rc with config.site:
 CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address"
 FFLAGS="-g -O2 -mtune=native"
