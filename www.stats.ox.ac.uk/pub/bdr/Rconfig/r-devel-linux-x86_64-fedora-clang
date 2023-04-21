@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 16.0.1 (C, C++), gfortran 12.2
+clang 16.0.1 (C, C++), gfortran 13.1
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
