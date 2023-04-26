@@ -1,3 +1,6 @@
+2023-04-25: experimenting with gcc 13.1, specifically RC3.  It is scheduled 
+for relase on Apr 26.
+
 R-devel
 x86_64 Fedora 36 Linux
 GCC 12.2 (C, C++, Fortran)

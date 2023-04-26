@@ -1,3 +1,6 @@
+Upadate: 2023-04-25
+The main fedora-gcc checks are in the process of migration to GCC 13.1.
+
 Tests as for fedora-gcc but with GCC trunk aka pre-13.0.0 -- the
 logs record the snapshot used.  Release is expected ca Apr 26.
 
