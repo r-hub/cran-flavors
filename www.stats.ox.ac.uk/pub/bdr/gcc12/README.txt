@@ -4,5 +4,4 @@ logs for the packages.
 
 This is used to screen packages for inspection by CRAN incoming.
 
-Many of these no longer warn in gcc 13.1-rc: 
-MCMCpack RPostgres RobustGaSP bayesm bmabasket dsfai mixedClust ordinalClust
+'gcc12' is historical as the fedora-gcc results are now done with GCC 13.

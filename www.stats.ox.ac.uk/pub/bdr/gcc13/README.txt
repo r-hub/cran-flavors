@@ -1,8 +1,9 @@
-Upadate: 2023-04-25
-The main fedora-gcc checks are in the process of migration to GCC 13.1.
+Upadate: 2023-04-26
+The main fedora-gcc checks have been migrated to GCC 13,
+and this area is only for historical records on archived packages.
 
 Tests as for fedora-gcc but with GCC trunk aka pre-13.0.0 -- the
-logs record the snapshot used.  Release is expected ca Apr 26.
+logs record the snapshot used.
 
 Further details as 
 
@@ -14,6 +15,3 @@ they are presumably included by some other header on earlier versions of gcc,
 or by other compilers or platforms.
 
 See also https://gcc.gnu.org/gcc-13/porting_to.html .
-
-Some check results show that gcc 13 is not giving compilation warnings
-that gcc 12 is -- or additional warnings.
