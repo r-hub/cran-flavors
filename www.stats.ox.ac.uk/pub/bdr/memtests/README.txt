@@ -8,8 +8,8 @@ How to run and interpret these (with links to further information) is in §4.3 o
 
 
 clang-ASAN, clang-UBSAN:
-Using clang 16.0.1 built with libc++/libcxxabi as the default C++ library,
-and gfortran 12.2. (Older results with clang 15.)
+Using clang 16.0.3 built with libc++/libcxxabi as the default C++ library,
+and gfortran 13.1. (Older results with clang 15 and gfortran 12.)
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 
@@ -32,7 +32,7 @@ setenv R_DONT_USE_TK true
 
 
 gcc-ASAN, gcc-UBSAN:
-gcc 13.1-rc2 with config.site:
+gcc 13.1 with config.site:
 CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address"
 FFLAGS="-g -O2 -mtune=native"
