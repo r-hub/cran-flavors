@@ -38,8 +38,6 @@ package 'magick'.
 poppler is 23.04.0 (earlier versions up to 22.03.0 do not compile with clang
 or segfaulted in package checks).
 
-libcurl was updated to 8.0.1 to test R's support for it.
-
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
 so packages using it have to arrange to be linked with Fortran.
 

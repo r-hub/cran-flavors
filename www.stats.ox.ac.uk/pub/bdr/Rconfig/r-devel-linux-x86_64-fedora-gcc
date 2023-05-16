@@ -31,8 +31,6 @@ A local TexLive is used, updated nightly, currently 2023.
 
 Fedora's build of pandoc (currently 2.14.0.3) is used.
 
-libcurl was updated to 8.0.1 to test R's support for it.
-
 JAGS-4.3.1 was installed from source.
 OpenBUGS-3.2.3 is installed using Fedora's i686 toolchain.
 TkTable 2.10 was installed from source.
