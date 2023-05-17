@@ -29,8 +29,10 @@ can use the system builds.
 
 However, with the system PROJ there are frequent hangs in package tests,
 worked around by installing the same versions of GDAL and PROJ from 
-their sources.  2023-03-15: upgraded to GDAL 3.6.3 to avoid ASAN errors
-in the checks of 'sf'.
+their sources.
+2023-03-15: upgraded to GDAL 3.6.3 to avoid ASAN errors in the checks of 'sf'.
+2023-05-16: upgraded to GDAL 3.7.0 and PROJ 9.2.0 as problems with
+hangs recurred -- and still persist.
 
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
