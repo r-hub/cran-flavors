@@ -31,13 +31,13 @@ However, with the system PROJ there are frequent hangs in package tests,
 worked around by installing the same versions of GDAL and PROJ from 
 their sources.
 2023-03-15: upgraded to GDAL 3.6.3 to avoid ASAN errors in the checks of 'sf'.
-2023-05-16: upgraded to GDAL 3.7.0 and PROJ 9.2.0 as problems with
-hangs recurred -- and still persist.
+2023-05-16: upgraded to GDAL 3.7.0, GEOS 3.11.2 and PROJ 9.2.0 as problems
+ with hangs recurred -- and still persist.
 
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 23.04.0 (earlier versions up to 22.03.0 do not compile with clang
+poppler is 23.05.0 (earlier versions up to 22.03.0 do not compile with clang
 or segfaulted in package checks).
 
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
@@ -109,4 +109,6 @@ which is not used by other CRAN check runs.
 
 A parellel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 30 CPUs.
-
+However,
+setenv OMP_THREAD_LIMIT 2
+is seti in an attempt to avoid this.
