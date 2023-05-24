@@ -1,6 +1,9 @@
+2023-05-22: rolled back to StanHeaders_2.21.0-7 as 2.26.25 broke ca 200
+packages on this platform.
+
 R-devel
 x86_64 Fedora 36 Linux
-clang 16.0.3 (C, C++), gfortran 13.1.0
+clang 16.0.4 (C, C++), gfortran 13.1.0
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -111,4 +114,4 @@ A parellel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 30 CPUs.
 However,
 setenv OMP_THREAD_LIMIT 2
-is seti in an attempt to avoid this.
+is set in an attempt to avoid this.
