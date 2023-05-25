@@ -30,6 +30,11 @@ setenv RGL_USE_NULL true
 setenv R_DONT_USE_TK true
 (There are ASAN errors in X libraries called from Tk initialization.)
 
+2025-05-24 changed to
+setenv ASAN_OPTIONS 'alloc_dealloc_mismatch=0:detect_leaks=0:detect_odr_violation=0'
+as PROJ 3.11.2 has alloc-dealloc mismatchs duting installation of all packages
+using it.
+
 
 gcc-ASAN, gcc-UBSAN:
 gcc 13.1 with config.site:
