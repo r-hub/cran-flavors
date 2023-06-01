@@ -1,6 +1,3 @@
-2023-05-22: rolled back to StanHeaders_2.21.0-7 as 2.26.25 broke ca 200
-packages on this platform.
-
 R-devel
 x86_64 Fedora 36 Linux
 clang 16.0.4 (C, C++), gfortran 13.1.0
