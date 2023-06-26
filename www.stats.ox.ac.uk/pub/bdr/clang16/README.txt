@@ -1,7 +1,7 @@
 clang 16.0.0 is now used for the main fedora-clang checks, so this is
 largely historical -- it also highlights some warnings only in clang >= 16.
 
-References to Rf_length in system headers come from includeing R headers
+References to Rf_length in system headers come from including R headers
 before system headers rather than after: see 'Writing R Extnesions'.
 
 std:unary_function was deprecated in C+11 and removed in C++17, and finally
