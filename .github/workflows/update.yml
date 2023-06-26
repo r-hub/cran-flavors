@@ -26,6 +26,10 @@ jobs:
           https://cran.r-project.org/web/checks/check_issue_kinds.html
         wget --recursive --span-hosts --no-parent --convert-links --level 1 \
           https://cran.r-project.org/web/checks/check_flavors.html
+        wget --recursive https://svn.r-project.org/R-dev-web/trunk/CRAN/QA/Kurt/bin/check-R-ng
+        wget --recursive https://svn.r-project.org/R-dev-web/trunk/CRAN/QA/Kurt/.R/check.Renviron
+        wget --recursive https://svn.r-project.org/R-dev-web/trunk/CRAN/QA/Kurt/lib/R/Scripts/check_CRAN_regular.R
+        wget --recursive https://svn.r-project.org/R-dev-web/trunk/CRAN/QA/Kurt/lib/R/Scripts/check_CRAN_incoming.R
         git add -A .
         if ! git diff --cached --exit-code \
           -I "^Last updated on [0-9]{4}[-][0-9]{2}[-][0-9]{2} [0-9]{2}:[0-9]{2}:[0-9]{2} CES?T."; then
