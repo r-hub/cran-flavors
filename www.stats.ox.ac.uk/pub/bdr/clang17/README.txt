@@ -1,0 +1,39 @@
+Tests as for the main fedora-clang checks but using LLVM trunk (pre-17.0.0),
+including flang-new as the Fortran compiler.  Other details as for
+https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang .
+
+The in-progress LLVM release notes are at
+https://intel.github.io/llvm-docs/clang/ReleaseNotes.html
+
+References to Rf_length in system headers come from including R headers
+before system headers rather than after: see 'Writing R Extnesions'.  For
+this toolchain, the problems are seen in files included from the 
+C++ header <vector>.
+
+That manual says
+
+"This remapping can cause problems, and can be eliminated by defining
+R_NO_REMAP (before including any R headers) and prepending ‘Rf_’ to all
+the function names used from Rinternals.h and R_ext/Error.h. These problems
+can usually be avoided by including other headers (such as system headers
+and those for external software used by the package) before any R headers.
+(Headers from other packages may include R headers directly or via inclusion
+from further packages, and may define R_NO_REMAP with or without including
+Rinternals.h.) "
+
+
+Notes for the Fortran compiler, 'flang-new':
+
+derfc is long obsolete: use erfc
+dlgama is a GNU extension: the F2008 function is LOG_GAMMA.
+etime is a GNU extension which can be replaced by CPU_TIME and/or
+SYSTEM_CLOCK, but seems unused by the packages calling it.
+getpid is a GNU extension.
+int8 should be INT(,KIND=8)
+isnan is a GNU extension.  There are standard ways to do this as from F2003
+(which seem not yet to be implemented in flang), or you can use
+if(my_var /= my_var).
+
+Some packages needed the stack limit increased (from 20MB to 50MB):
+KFAS NPRED SynchWave TSSS calcWOI sequoia
+
