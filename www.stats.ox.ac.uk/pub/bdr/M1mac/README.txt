@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1') Mac running macOS 13.4.1
-'Ventura' with Xcode/CLT 14.3.1 and the build of gfortran (a fork of 12.2) from
+'Ventura' with Xcode/CLT 15 and the build of gfortran (a fork of 12.2) from
 https://github.com/R-macos/gcc-12-branch/releases/tag/12.2-darwin-r0.1
 
 Timezone Europe/London
@@ -31,7 +31,7 @@ Currently this uses PROJ 9.2.1, GEOS 3.11.2, GDAL 3.7.0.
 
 pandoc is the arm64 Mac version, currently 3.1.4 (and updated often).
 
-Java is 17.0.6 from https://adoptium.net
+Java is 17.0.7 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
@@ -48,7 +48,7 @@ Some ways in which this may differ from the CRAN checks:
 - OS and Command Line Tools are kept up-to-date (at present the CRAN
     check service is running macOS 11, and Xcode/CLT 13 except for R-devel).
 - Later C/C++ compilers, different flags.
-  Apple clang 14.0.3 seems a major update, with many aspects of
+  Apple clang 14.0.3 seems was a major update, with many aspects of
     LLVM clang 15/16 having been ported.
 - External software is (mainly) kept up-to-date -- see above.
     This includes using Java 17 and cmake, currently 3.26.4.
