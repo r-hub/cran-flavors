@@ -27,12 +27,11 @@ Notes for the Fortran compiler, 'flang-new':
 derfc is long obsolete: use erfc
 dlgama is a GNU extension: the F2008 function is LOG_GAMMA.
 etime is a GNU extension which can be replaced by CPU_TIME and/or
-SYSTEM_CLOCK, but seems unused by the packages calling it.
+  SYSTEM_CLOCK, but seems unused by the packages calling it.
 getpid is a GNU extension.
-int8 should be INT(,KIND=8)
-isnan is a GNU extension.  There are standard ways to do this as from F2003
-(which seem not yet to be implemented in flang), or you can use
-if(my_var /= my_var).
+isnan is a GNU extension.  There are standard ways to do this as from F2003,
+  or you can use if(my_var /= my_var).
+
 
 Some packages needed the stack limit increased (from 20MB to 50MB):
 KFAS NPRED SynchWave TSSS calcWOI sequoia
