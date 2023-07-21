@@ -24,7 +24,6 @@ Rinternals.h.) "
 
 Notes for the Fortran compiler, 'flang-new':
 
-derfc is long obsolete: use erfc
 dlgama is a GNU extension: the F2008 function is LOG_GAMMA.
 etime is a GNU extension which can be replaced by CPU_TIME and/or
   SYSTEM_CLOCK, but seems unused by the packages calling it.
