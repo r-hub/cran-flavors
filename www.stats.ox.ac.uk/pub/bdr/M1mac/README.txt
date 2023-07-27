@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-13.4.1 'Ventura' with Xcode/CLT 15 and the build of gfortran (a fork
+13.5 'Ventura' with Xcode/CLT 15 and the build of gfortran (a fork
 of 12.2) from
 https://github.com/R-macos/gcc-12-branch/releases/tag/12.2-darwin-r0.1
 
@@ -49,8 +49,9 @@ Some ways in which this may differ from the CRAN checks:
 - OS and Command Line Tools are kept up-to-date (at present the CRAN
     check service is running macOS 11, and Xcode/CLT 13 except for R-devel).
 - Later C/C++ compilers, different flags.
-  Apple clang 14.0.3 seems was a major update, with many aspects of
-    LLVM clang 15/16 having been ported.
+  Apple clang 14.0.3 it seems was a major update, with many aspects of
+    LLVM clang 15/16 having been ported. Version 15 is a minor update from
+    14.0.3.
   The SDK in ICU 15 has disabled the termcap emulation of terminfo.
 - External software is (mainly) kept up-to-date -- see above.
     This includes using Java 17 and cmake, currently 3.26.4.
@@ -113,5 +114,5 @@ setenv _R_CHECK_VIGNETTES_SKIP_RUN_MAYBE_ true
 setenv _R_CHECK_TESTS_NLINES_ 0
 setenv _R_CHECK_VIGNETTES_NLINES_ 0
 
-A parellel make is used and packages are checked in parallel --
+A parallel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 8 CPUs.

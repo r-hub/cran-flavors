@@ -1,5 +1,6 @@
-Tests as for the main fedora-clang checks but using LLVM trunk (pre-17.0.0),
-including flang-new as the Fortran compiler.  Other details as for
+Tests as for the main fedora-clang checks but using LLVM 17.0.0 
+release candidates, including flang-new as the Fortran compiler.
+Other details as for 
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang .
 
 The in-progress LLVM release notes are at
