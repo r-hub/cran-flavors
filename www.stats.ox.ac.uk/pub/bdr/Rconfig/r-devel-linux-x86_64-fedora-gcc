@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-GCC 13,1,0 (C, C++, Fortran)
+GCC 13,2,0 (C, C++, Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
