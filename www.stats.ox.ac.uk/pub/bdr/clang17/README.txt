@@ -6,6 +6,9 @@ https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang .
 The in-progress LLVM release notes are at
 https://intel.github.io/llvm-docs/clang/ReleaseNotes.html
 
+Pre-built compilers may be available at
+https://github.com/llvm/llvm-project/releases
+
 References to Rf_length in system headers come from including R headers
 before system headers rather than after: see 'Writing R Extnesions'.  For
 this toolchain, the problems are seen in files included from the 
