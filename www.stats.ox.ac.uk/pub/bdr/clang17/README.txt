@@ -9,6 +9,8 @@ https://intel.github.io/llvm-docs/clang/ReleaseNotes.html
 Pre-built compilers may be available at
 https://github.com/llvm/llvm-project/releases
 
+The current schedule has release on Sep 5.
+
 References to Rf_length in system headers come from including R headers
 before system headers rather than after: see 'Writing R Extnesions'.  For
 this toolchain, the problems are seen in files included from the 
