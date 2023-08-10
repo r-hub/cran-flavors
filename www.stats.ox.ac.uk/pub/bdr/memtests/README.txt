@@ -55,7 +55,7 @@ setenv R_DONT_USE_TK true
 
 valgrind:
 Running R CMD check --use-valgrind with an instrumented (level 2) build of R,
-currently using valgrind 3.18.1 on Fedora 34.
+currently using valgrind 3.21.0 on Fedora 38.
 
 configured by:
 .../configure -C --with-valgrind-instrumentation=2
