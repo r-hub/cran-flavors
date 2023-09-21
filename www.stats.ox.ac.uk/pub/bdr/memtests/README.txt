@@ -8,8 +8,8 @@ How to run and interpret these (with links to further information) is in §4.3 o
 
 
 clang-ASAN, clang-UBSAN:
-Using clang 16.0.3 built with libc++/libcxxabi as the default C++ library,
-and gfortran 13.2. (Older results with clang 15 and gfortran 12.)
+Using clang 16 built with libc++/libcxxabi as the default C++ library,
+and gfortran 13.2. (Older results with clang 15 or fortran 12.)
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 

@@ -1,15 +1,20 @@
-Tests as for the main fedora-clang checks but using LLVM 17.0.0 
-release candidates, including flang-new as the Fortran compiler.
+2023-09-20: the fedora-clang checks has switched to LLVM 17.0.1 so 
+this area will not be updated.  It still contains check logs for
+packages which have been archived before that date.
+
+
+Tests as for the main fedora-clang checks but using LLVM 17.0.1 
+including flang-new as the Fortran compiler.
 Other details as for 
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang .
 
-The in-progress LLVM release notes are at
-https://intel.github.io/llvm-docs/clang/ReleaseNotes.html
+The clang and LLVM release notes are at
+https://releases.llvm.org/17.0.1/tools/clang/docs/ReleaseNotes.html
+https://releases.llvm.org/17.0.1/docs/ReleaseNotes.html
 
 Pre-built compilers may be available at
 https://github.com/llvm/llvm-project/releases
 
-The current schedule has release on Sep 5. (Deferred to Sept 19.)
 
 References to Rf_length in system headers come from including R headers
 before system headers rather than after: see 'Writing R Extnesions'.  For
