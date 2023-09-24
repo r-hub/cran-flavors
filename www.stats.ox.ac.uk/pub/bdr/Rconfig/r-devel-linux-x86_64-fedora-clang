@@ -25,7 +25,7 @@ Some external C++ libraries compiled with clang/libc++ are installed under
 but subject to change.  Other C++ libraries, e.g. 
 GEOS PROJ SYMPHONY zeromq
 can use the system builds.
-(Boost was built with clang 14 as it fails to compile with 15 or 16.)
+(Boost was built with clang 14 as it fails to compile with 15 or later.)
 
 However, with the system PROJ there are frequent hangs in package tests,
 worked around by installing the same versions of GDAL and PROJ from 
