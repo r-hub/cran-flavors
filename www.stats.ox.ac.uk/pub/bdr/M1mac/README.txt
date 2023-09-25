@@ -118,3 +118,5 @@ setenv _R_CHECK_VIGNETTES_NLINES_ 0
 
 A parallel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 8 CPUs.
+
+2023-09-20: Bioconductor 3.18 is used.
