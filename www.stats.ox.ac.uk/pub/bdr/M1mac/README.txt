@@ -8,7 +8,7 @@ Locale en_GB.UTF-8, LC_COLLATE=C
 
 Details as in the R-admin manual, with config.site containing
 
-CC="clang -mmacos-version-min=13.5"
+CC="clang -mmacos-version-min=14.0"
 OBJC=$CC
 FC="/opt/gfortran/bin/gfortran -mtune=native"
 CXX=clang++
@@ -53,7 +53,7 @@ Some ways in which this may differ from the CRAN checks:
   Apple clang 14.0.3 it seems was a major update from 14.0.0, with
     many aspects of LLVM clang 15/16 having been ported.
     Version 15 seems a minor update from 14.0.3.
-  The SDK in ICU 15 has disabled the termcap emulation of terminfo.
+  The default SDK in CLT 15 has disabled the termcap emulation of terminfo.
 - External software is (mainly) kept up-to-date -- see above.
     This includes using Java 17 and cmake, currently 3.27.5.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI .
