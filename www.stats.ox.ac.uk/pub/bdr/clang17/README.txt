@@ -1,9 +1,8 @@
 2023-09-20: the fedora-clang checks has switched to LLVM 17.0.1 so 
 this area will not be updated.  It still contains check logs for
-packages which have been archived before that date.
+packages which have been archived before or on that date.
 
-
-Tests as for the main fedora-clang checks but using LLVM 17.0.1 
+Tests as for the main fedora-clang checks but using LLVM pre-17
 including flang-new as the Fortran compiler.
 Other details as for 
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang .
