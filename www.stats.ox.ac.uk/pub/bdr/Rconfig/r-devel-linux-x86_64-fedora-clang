@@ -52,6 +52,11 @@ with libc++ .
 OpenBUGS-3.2.3 (using i686 gcc) was installed from source.
 TkTable 2.10 was installed from source.
 
+Several BioC packages have broken C++ and needed to be patched.  Currently
+EBImage Rdisop Rsamtools mzR
+and the unpatched DiffBind GeneticsPed SeqArray fail to install, hence
+several CRAN packages.
+
 This is currently using the environment variables
 
 setenv _R_CHECK_INSTALL_DEPENDS_ true
