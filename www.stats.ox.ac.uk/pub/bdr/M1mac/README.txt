@@ -32,7 +32,7 @@ Currently this uses PROJ 9.3.0, GEOS 3.12.0, GDAL 3.7.2.
 
 pandoc is the arm64 Mac version, currently 3.1.8 (and updated often).
 
-Java is 17.0.8 from https://adoptium.net
+Java is 21.0.1 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
