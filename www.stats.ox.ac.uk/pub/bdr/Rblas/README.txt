@@ -21,3 +21,8 @@ OpenBLAS:
 Serial OpenBLAS using the Fedora shared libraries (currently version 0.3.19).
 libRblas.so was replaced by a symlink to /usr/lib64/libopenblas.so (part of
 openblas-devel, linked from openblas-serial). This reports using LAPACK 3.9.0.
+
+Pto tem, using
+
+setenv _R_CHECK_MBCS_CONVERSION_FAILURE_ true
+
