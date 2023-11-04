@@ -30,7 +30,7 @@ which need to use dynamic libraries (such as openmpi).
 Currently this uses PROJ 9.3.0, GEOS 3.12.0, GDAL 3.7.2.
 (GDAL needs manual patching of gdal-config, PROJ of proj.pc.)
 
-pandoc is the arm64 Mac version, currently 3.1.8 (and updated often).
+pandoc is the arm64 Mac version, currently 3.1.9 (and updated often).
 
 Java is 21.0.1 from https://adoptium.net
 
@@ -100,6 +100,8 @@ setenv _R_CHECK_MBCS_CONVERSION_FAILURE_ true
 
 setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
+setenv _R_CHECK_VALIDATE_UTF8_ true
+(needed for macOS 14.1 to avoid the check process segfaulting)
 
 setenv R_DEFAULT_INTERNET_TIMEOUT 600
 setenv NOAWT 1
@@ -119,5 +121,3 @@ setenv _R_CHECK_VIGNETTES_NLINES_ 0
 
 A parallel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 8 CPUs.
-
-2023-09-20: Bioconductor 3.18 is used.
