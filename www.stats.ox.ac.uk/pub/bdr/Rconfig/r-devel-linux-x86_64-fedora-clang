@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 17.0.3 (C, C++), flang 17.0.3 (Fortran)
+clang 17.0.4 (C, C++), flang-new 17.0.4 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -34,7 +34,7 @@ their sources.  (Attempts to use later versions brought the hangs back.)
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 23.07.0
+poppler is 23.09.0
 
 The gfortran OpenMP generates calls not in clang's OpenMP runtime,
 so packages using it have to arrange to be linked with Fortran.
@@ -43,7 +43,7 @@ A local TexLive is used, updated nightly, currently 2023.
 
 Java 17.0.6 from Fedora 36 ('java-17-openjdk') is used.
 
-pandoc 3.1.8 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+pandoc 3.1.9 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 (as used for the fedora-gcc checks) is rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
@@ -54,8 +54,6 @@ TkTable 2.10 was installed from source.
 
 Several BioC packages have broken C++ and needed to be patched.  Currently
 EBImage Rdisop Rsamtools mzR
-and the unpatched DiffBind GeneticsPed SeqArray fail to install, hence
-several CRAN packages.
 
 This is currently using the environment variables
 
