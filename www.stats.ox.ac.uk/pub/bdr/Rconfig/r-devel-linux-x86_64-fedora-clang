@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 17.0.5 (C, C++), flang-new 17.0.5 (Fortran)
+clang 17.0.6 (C, C++), flang-new 17.0.6 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
