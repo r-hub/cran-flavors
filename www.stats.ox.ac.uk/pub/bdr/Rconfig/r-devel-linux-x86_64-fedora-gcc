@@ -20,7 +20,7 @@ The -Wno flags reduce the deluge of warnings from Boost and Eigen headers.
 The security flags follow Fedora. -Werror=implicit-function-declaration
 gives stricter C99 compliance as used by macOS.
 
-The LTO flags mean that R and recoomended packages are built with LTO and
+The LTO flags mean that R and recomended packages are built with LTO and
 are slightly smaller and faster.
 
 This uses the system LAPACK, which is currently 3.10.1.
