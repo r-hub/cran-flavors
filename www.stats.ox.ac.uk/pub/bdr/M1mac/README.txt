@@ -54,7 +54,7 @@ this may differ from the CRAN checks:
     Versions 15.x seems a minor update from 14.0.3.
   The default SDK in CLT 15 has disabled the termcap emulation of terminfo.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes using Java 17 and cmake, currently 3.28.0.
+    This includes using Java 17 and cmake, currently 3.28.1.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI .
 - 'R' is not on the path -- checking is by 'Rdev'.
 - Package INLA is installed -- requires a binary install on Macs.
