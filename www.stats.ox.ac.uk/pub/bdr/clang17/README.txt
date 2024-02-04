@@ -2,6 +2,9 @@
 this area will not be updated.  It still contains check logs for
 packages which have been archived before or on that date.
 
+2024-02-03: also used to record (direct) installation and check failures
+not seen with fedora-gcc checks.
+
 Tests as for the main fedora-clang checks but using LLVM pre-17
 including flang-new as the Fortran compiler.
 Other details as for 
