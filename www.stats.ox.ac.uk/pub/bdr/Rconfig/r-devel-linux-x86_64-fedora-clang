@@ -4,7 +4,7 @@ clang 17.0.6 (C, C++), flang-new 17.0.6 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
-configured with --without-lapack --with-libdeflate-compression and config.site:
+configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3"
@@ -12,6 +12,8 @@ CPPFLAGS="-isystem /usr/local/clang/include"
 LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang17/lib -L/usr/local/lib64"
 
 [-Wno-error=enum-constexpr-conversion is needed in CXXFLAGS to compile mzR]
+
+[2024-02-07 transitioning to LLVM 18.1.0rc1.]
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
