@@ -13,7 +13,7 @@ LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang17/lib -L/usr/local/lib64"
 
 [-Wno-error=enum-constexpr-conversion is needed in CXXFLAGS to compile mzR]
 
-[2024-02-07 transitioning to LLVM 18.1.0rc1.]
+[2024-02-07 transitioning to LLVM 18.1.0rc?.]
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
