@@ -1,3 +1,5 @@
+[2024-02-07 transitioning to LLVM 18.1.0rc.]
+
 R-devel
 x86_64 Fedora 36 Linux
 clang 17.0.6 (C, C++), flang-new 17.0.6 (Fortran)
@@ -12,8 +14,6 @@ CPPFLAGS="-isystem /usr/local/clang/include"
 LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang17/lib -L/usr/local/lib64"
 
 [-Wno-error=enum-constexpr-conversion is needed in CXXFLAGS to compile mzR]
-
-[2024-02-07 transitioning to LLVM 18.1.0rc?.]
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
