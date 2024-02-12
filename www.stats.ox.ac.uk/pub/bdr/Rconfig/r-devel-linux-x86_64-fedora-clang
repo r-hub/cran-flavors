@@ -1,8 +1,6 @@
-[2024-02-07 transitioning to LLVM 18.1.0rc.]
-
 R-devel
 x86_64 Fedora 36 Linux
-clang 17.0.6 (C, C++), flang-new 17.0.6 (Fortran)
+clang 18.1.0rc (C, C++), flang-new 18.1.0rc (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -11,7 +9,7 @@ CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3"
 CPPFLAGS="-isystem /usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang17/lib -L/usr/local/lib64"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang18/lib -L/usr/local/lib64"
 
 [-Wno-error=enum-constexpr-conversion is needed in CXXFLAGS to compile mzR]
 
@@ -36,20 +34,18 @@ their sources.  (Attempts to use later versions brought the hangs back.)
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 23.11.0
-
-The gfortran OpenMP generates calls not in clang's OpenMP runtime,
-so packages using it have to arrange to be linked with Fortran.
+poppler is 24.02.0
 
 A local TexLive is used, updated nightly, currently 2023.
 
-Java 17.0.6 from Fedora 36 ('java-17-openjdk') is used.
+Java 17.0.7 from Fedora 36 ('java-17-openjdk') is used.
 
 pandoc 3.1.11.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 (as used for the fedora-gcc checks) is rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
-with libc++ .
+with libc++ .  As was x13binary whose Makefile makes several unreliable
+assumptions.
 
 OpenBUGS-3.2.3 (using i686 gcc) was installed from source.
 TkTable 2.10 was installed from source.
@@ -113,3 +109,4 @@ installing or checking a single package may use up to 30 CPUs.
 However,
 setenv OMP_THREAD_LIMIT 2
 is set in an attempt to avoid this.
+
