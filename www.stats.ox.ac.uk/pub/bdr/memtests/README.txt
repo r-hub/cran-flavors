@@ -12,8 +12,10 @@ Using clang 16 built with libc++/libcxxabi as the default C++ library,
 and gfortran 13.2. (Older results with clang 15 or fortran 12.)
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
-NB: unlike the fedora-clang resulta this does not yet use clang 17 and 
-flang 17, as R does not compile under ASAN for those compilers.
+
+NB: unlike the fedora-clang resulta this does not use clang 18 and 
+flang 18, as R does not compile under ASAN for those compilers (nor did it for 117). It was possible to change library paths so the support libraries were
+found, but the build hung making package tools..
 
 config.site:
 CC="clang -fsanitize=address,undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer"
