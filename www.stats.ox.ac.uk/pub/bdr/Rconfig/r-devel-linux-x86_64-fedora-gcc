@@ -27,6 +27,9 @@ This uses the system LAPACK, which is currently 3.10.1.
 
 Java 11 (Fedora 36's 11.0.18) is used.
 
+pandoc 3.1.11.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+rather old.
+
 A local TexLive is used, updated nightly, currently 2023.
 
 Fedora's build of pandoc (currently 2.14.0.3) is used.
