@@ -6,51 +6,82 @@ also report errors, including from examples.
 
 How to run and interpret these (with links to further information) is in §4.3 of 'Writing R Extensions'.  The settings used are listed by sub-directory in the rest of this file.
 
+Results for archived packages will likely have been made with earilier 
+versions of the compilers.
 
-clang-ASAN, clang-UBSAN:
-Using clang 16 built with libc++/libcxxabi as the default C++ library,
-and gfortran 13.2. (Older results with clang 15 or fortran 12.)
+clnag-ASAN
+Using clang 18 built with libc++/libc++abi as the default C++ library,
+and flang-new 18 as he Fortran compiler. Note that the latter does
+not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 
-NB: unlike the fedora-clang resulta this does not use clang 18 and 
-flang 18, as R does not compile under ASAN for those compilers (nor did it for 117). It was possible to change library paths so the support libraries were
-found, but the build hung making package tools..
-
 config.site:
-CC="clang -fsanitize=address,undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer"
-CXX="clang++ -fsanitize=address,undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer -frtti"
-CFLAGS="-g -O3 -Wall -pedantic"
-FFLAGS="-g -O2 -mtune=native"
-CXXFLAGS="-g -O3 -Wall -pedantic"
-MAIN_LD="clang++ -fsanitize=undefined,address"
+CC="clang -fsanitize=addres-fno-omit-frame-pointer"
+CXX="clang++ -fsanitize=address,undefinedt -fno-omit-frame-pointer -frtti"
+CFLAGS="-g -O3 -Wall -pedantic  -Wp,-D_FORTIFY_SOURCE=3"
+CXXFLAGS="-g -O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
+FFLAGS="-O2 -pedantic"
 
 and environment variables
 setenv ASAN_OPTIONS detect_leaks=0
+setenv RJAVA_JVM_STACK_WORKAROUND 0
+setenv RGL_USE_NULL true
+(alloc-dealloc mismatches were seen in system libraries used by rgl)
+setenv R_DONT_USE_TK true
+(There were ASAN errors in X libraries called from Tk initialization.)
+
+[Results prior to 2024-02-17 were made with clang 16 and gfortran 13.2.]
+
+
+clang-UBSAN:
+Using clang 16 built with libc++/libc++abi as the default C++ library,
+and gfortran 13.2.  Note that the gfortran sanitizers are incompatible
+with the clang ones, so only C/C++ code is being checked.
+[For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
+add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
+
+NB: unlike the fedora-clang and clang-ASAN results this does not use 
+clang 18 and flang-new 18, as R does not compile under UBSAN for 
+those compilers  (nor did it for 17). It was possible to change 
+library paths so the support libraries were found, but the build hung
+making package tools.
+
+config.site:
+CC="clang -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer"
+CXX="clang++ -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer -frtti"
+CFLAGS="-g -O3 -Wall -pedantic"
+FC=gfortran-13
+FFLAGS="-g -O2 -mtune=native"
+CXXFLAGS="-g -O3 -Wall -pedantic"
+MAIN_LD="clang++ -fsanitize=undefined"
+
+and environment variables
 setenv UBSAN_OPTIONS 'print_stacktrace=1'
 setenv RJAVA_JVM_STACK_WORKAROUND 0
 setenv RGL_USE_NULL true
 (alloc-dealloc mismatches were seen in system libraries used by rgl)
 setenv R_DONT_USE_TK true
-(There are ASAN errors in X libraries called from Tk initialization.)
+(There were ASAN errors in X libraries called from Tk initialization.)
 
 
 gcc-ASAN, gcc-UBSAN:
 gcc 13.2 with config.site:
-CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
-CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address"
+CC=gcc-13
+CXX="g++-13 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
+CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3"
+FC=gfortran-13
 FFLAGS="-g -O2 -mtune=native"
 CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native"
 MAIN_LDFLAGS="-fsanitize=address,undefined -pthread"
 
 ~/.R/Makevars:
-CC = gcc -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
-F77 = gfortran -fsanitize=address
-FC = gfortran -fsanitize=address
+CC = gcc-13 -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
+FC = gfortran-13 -fsanitize=address
 
 and environment variables
-setenv ASAN_OPTIONS 'detect_leaks=0:detect_odr_violation=0'
-[Experimenting without detect_odr_violation=0]
+setenv ASAN_OPTIONS 'detect_leaks=0'
+[RcppParallel is run adding detect_odr_violation=0]
 setenv UBSAN_OPTIONS 'print_stacktrace=1'
 setenv RJAVA_JVM_STACK_WORKAROUND 0
 setenv RGL_USE_NULL true
