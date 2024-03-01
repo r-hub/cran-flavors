@@ -9,9 +9,10 @@ How to run and interpret these (with links to further information) is in §4.3 o
 Results for archived packages will likely have been made with earilier 
 versions of the compilers.
 
+
 clnag-ASAN
 Using clang 18 built with libc++/libc++abi as the default C++ library,
-and flang-new 18 as he Fortran compiler. Note that the latter does
+and flang-new 18 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -35,34 +36,24 @@ setenv R_DONT_USE_TK true
 
 
 clang-UBSAN:
-Using clang 16 built with libc++/libc++abi as the default C++ library,
-and gfortran 13.2.  Note that the gfortran sanitizers are incompatible
-with the clang ones, so only C/C++ code is being checked.
+Using clang 18 built with libc++/libc++abi as the default C++ library,
+and flang-new 18 as the Fortran compiler. Note that the latter does
+not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 
-NB: unlike the fedora-clang and clang-ASAN results this does not use 
-clang 18 and flang-new 18, as R does not compile under UBSAN for 
-those compilers  (nor did it for 17). It was possible to change 
-library paths so the support libraries were found, but the build hung
-making package tools.
+An unaltered build of R was used, but each package was tested with 
+R_MAKEVARS_USER pointing to a file containing
 
-config.site:
-CC="clang -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer"
-CXX="clang++ -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-sanitize=alignment -fno-omit-frame-pointer -frtti"
-CFLAGS="-g -O3 -Wall -pedantic"
-FC=gfortran-13
-FFLAGS="-g -O2 -mtune=native"
-CXXFLAGS="-g -O3 -Wall -pedantic"
-MAIN_LD="clang++ -fsanitize=undefined"
+CC=/usr/local/clang18/bin/clang -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer
+CXX=/usr/local/clang18/bin/clang++ -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer -frtti
 
-and environment variables
-setenv UBSAN_OPTIONS 'print_stacktrace=1'
-setenv RJAVA_JVM_STACK_WORKAROUND 0
-setenv RGL_USE_NULL true
-(alloc-dealloc mismatches were seen in system libraries used by rgl)
-setenv R_DONT_USE_TK true
-(There were ASAN errors in X libraries called from Tk initialization.)
+UBSAN_DIR = /usr/local/clang18/lib/clang/18/lib/x86_64-unknown-linux-gnu
+SHLIB_LIBADD = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
+
+as discussed in 'Writing R Extensions'.
+
+[Results prior to 2024-02-17 were made with clang 16 and gfortran 13.2.]
 
 
 gcc-ASAN, gcc-UBSAN:
