@@ -45,11 +45,11 @@ add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 An unaltered build of R was used, but each package was tested with 
 R_MAKEVARS_USER pointing to a file containing
 
-CC=/usr/local/clang18/bin/clang -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer
-CXX=/usr/local/clang18/bin/clang++ -fsanitize=undefined -fno-sanitize=float-divide-by-zero -fno-omit-frame-pointer -frtti
+CC=/usr/local/clang18/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
+CXX=/usr/local/clang18/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
 
 UBSAN_DIR = /usr/local/clang18/lib/clang/18/lib/x86_64-unknown-linux-gnu
-SHLIB_LIBADD = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
+SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
 as discussed in 'Writing R Extensions'.
 
