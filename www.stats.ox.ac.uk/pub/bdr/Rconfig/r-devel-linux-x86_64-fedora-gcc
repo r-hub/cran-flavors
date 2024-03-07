@@ -27,7 +27,7 @@ This uses the system LAPACK, which is currently 3.10.1.
 
 Java 11 (Fedora 36's 11.0.18) is used.
 
-pandoc 3.1.11.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+pandoc 3.1.12.2 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 rather old.
 
 A local TexLive is used, updated nightly, currently 2023.
@@ -80,6 +80,7 @@ setenv _R_CHECK_DEPENDS_ONLY_DATA_ true
 setenv _R_CHECK_MATRIX_DATA_ TRUE
 setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
+setenv _R_DEPRECATED_IS_R_ error
 
 Note the _R_CHECK_SUGGESTS_ONLY_ setting, which is different from the
 the Fedora-clang runs.

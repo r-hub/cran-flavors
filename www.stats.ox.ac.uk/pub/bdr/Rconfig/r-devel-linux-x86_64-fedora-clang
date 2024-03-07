@@ -1,8 +1,10 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 18.1.0rc (C, C++), flang-new 18.1.0rc (Fortran)
+clang 18.1.0 (C, C++), flang-new 18.1.0 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
+
+[NB: this IS the released 18.1.0 but it reports itself as 18.1.0rc.]
 
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
@@ -34,13 +36,13 @@ their sources.  (Attempts to use later versions brought the hangs back.)
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 24.02.0
+poppler is 24.03.0
 
 A local TexLive is used, updated nightly, currently 2023.
 
 Java 17.0.7 from Fedora 36 ('java-17-openjdk') is used.
 
-pandoc 3.1.11.1 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+pandoc 3.1.12.2 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
@@ -97,6 +99,7 @@ setenv _R_CHECK_BOGUS_RETURN_ true
 setenv _R_CHECK_MATRIX_DATA_ TRUE
 setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
+setenv _R_DEPRECATED_IS_R_ error
 
 Note
 
