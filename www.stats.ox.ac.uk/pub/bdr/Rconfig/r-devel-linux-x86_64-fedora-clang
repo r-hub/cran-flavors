@@ -1,10 +1,8 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 18.1.0 (C, C++), flang-new 18.1.0 (Fortran)
+clang 18.1.1 (C, C++), flang-new 18.1.1 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
-
-[NB: this IS the released 18.1.0 but it reports itself as 18.1.0rc.]
 
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
