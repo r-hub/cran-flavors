@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 18.1.1 (C, C++), flang-new 18.1.1 (Fortran)
+clang 18.1.2 (C, C++), flang-new 18.1.2 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -40,7 +40,7 @@ A local TexLive is used, updated nightly, currently 2023.
 
 Java 17.0.7 from Fedora 36 ('java-17-openjdk') is used.
 
-pandoc 3.1.12.2 from pandoc's binary distribution is used: Fedora's 2.14.0.3
+pandoc 3.1.12.3 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 rather old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
