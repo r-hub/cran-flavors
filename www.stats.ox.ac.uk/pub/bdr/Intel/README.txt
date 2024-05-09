@@ -1,5 +1,5 @@
 Checks of packages with C/C++/Fortran compiled code, using the
-Intel compilers icx/ipcx/ifx from oneAPI 2024.2 and oneMKL 2023.2.0,
+Intel compilers icx/ipcx/ifx from oneAPI 2024.1.0 and oneMKL 2023.2.0,
 with settings as described in 
 https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Intel-compilers
 

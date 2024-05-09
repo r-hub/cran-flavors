@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-14.4 'Sonoma' with Xcode/CLT 15.3 (which selects SDK 14.4) and the
+14.4.1 'Sonoma' with Xcode/CLT 15.3 (which selects SDK 14.4) and the
 build of gfortran (a fork of 12.2) from
 https://github.com/R-macos/gcc-12-branch/releases/tag/12.2-darwin-r0.1
 
@@ -8,10 +8,10 @@ Locale en_GB.UTF-8, LC_COLLATE=C
 
 Details as in the R-admin manual, with config.site containing
 
-CC="clang -mmacos-version-min=14.0"
+CC="clang -mmacos-version-min=14.3"
 OBJC=$CC
 FC="/opt/gfortran/bin/gfortran -mtune=native"
-CXX="clang++ -mmacos-version-min=14.0"
+CXX="clang++ -mmacos-version-min=14.3"
 CFLAGS="-falign-functions=8 -g -O2 -Wall -pedantic -Wconversion -Wno-sign-conversion -Wstrict-prototypes"
 C17FLAGS="-falign-functions=8 -g -O2 -Wall -pedantic -Wconversion -Wno-sign-conversion -Wno-strict-prototypes"
 C90FLAGS="-falign-functions=8 -g -O2 -Wall -pedantic -Wconversion -Wno-sign-conversion -Wno-strict-prototypes"
@@ -27,23 +27,23 @@ modifications to Simon Urbanek's 'recipes' at
 https://github.com/R-macos/recipes .  The main exceptions are those
 which need to use dynamic libraries (such as openmpi).
 
-Currently this uses PROJ 9.3.1, GEOS 3.12.1, GDAL 3.8.4.
-(GDAL needs manual patching of gdal-config, PROJ of proj.pc.)
+Currently this uses PROJ 9.4.0, GEOS 3.12.1, GDAL 3.8.5.
+(GDAL needs manual patching of gdal-config.)
 
-pandoc is the arm64 Mac version, currently 3.1.12.2 (and updated often).
+pandoc is the arm64 Mac version, currently 3.1.13 (and updated often).
 
 Java is 21.0.2 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
 
-ghoatscript is 10.03.0 rom MacTeX 2024.
+ghoatscript is 10.03.0 from MacTeX 2024.
 
 There is a testing service for the CRAN M1mac setup at
 https://mac.r-project.org/macbuilder/submit.html .  Some ways in which
 this may differ from the CRAN checks:
 
-- Using R-devel not R 4.[23].x
+- Using R-devel not R 4.[234].x
 - timezone is Europe/London not Pacific/Auckland
 - OS and Command Line Tools are kept up-to-date (at present the CRAN
     check service is running macOS 11, and Xcode/CLT 14.0.3 with the
@@ -53,7 +53,7 @@ this may differ from the CRAN checks:
     many aspects of LLVM clang 15/16 having been ported.
     Versions 15.0.0 seem a minor update from 14.0.3.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes using Java 21 and cmake, currently 3.28.3.
+    This includes using Java 21 and cmake, currently 3.29.0.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI, currently 5.0.1.
 - Package INLA is installed -- requires a binary install on Macs.
 
@@ -61,8 +61,7 @@ Packages with non-default installs:
 
 sf: --configure-args='--with-data-copy --with-proj-data=/opt/R/arm64/share/proj'
 
-Several BioC packages needed patching, currently
-EBImage Rdisop Rsamtools mzR rhdf5filters
+Several BioC packages have needed patching, currently EBImage Rdisop
 
 Options used for 'R CMD check':
 
