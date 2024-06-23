@@ -57,18 +57,18 @@ as discussed in 'Writing R Extensions'.
 
 
 gcc-ASAN, gcc-UBSAN:
-gcc 13.2 with config.site:
-CC=gcc-13
-CXX="g++-13 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
+gcc 14.1 with config.site:
+CC=gcc-14
+CXX="g++-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3"
-FC=gfortran-13
+FC=gfortran-14
 FFLAGS="-g -O2 -mtune=native"
 CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native"
 MAIN_LDFLAGS="-fsanitize=address,undefined -pthread"
 
 ~/.R/Makevars:
-CC = gcc-13 -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
-FC = gfortran-13 -fsanitize=address
+CC = gcc-14 -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
+FC = gfortran-14 -fsanitize=address
 
 and environment variables
 setenv ASAN_OPTIONS 'detect_leaks=0'
