@@ -4,6 +4,8 @@ GCC 14.1.0 (C, C++, Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
+[2024-08-01: testing GCC 14.2 RC2, which reports 14.1.1 20240729.]]
+
 configured with options --enable-lto=R, config.site:
 
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORTIFY_SOURCE=3 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection -Werror=implicit-function-declaration -Wstrict-prototypes"
