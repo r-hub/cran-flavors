@@ -1,7 +1,7 @@
 Tests with STRICT_R_HEADERS defined to 1. This removes
 
-- the legacy definition of PI (use POSIX's M_PI, available in R fer ever).
-- the RS.h declarations for Calloc, Realloc, Free (use R_ forms i
+- the legacy definition of PI (use POSIX's M_PI, available in R 'for ever').
+- the RS.h declarations for Calloc, Realloc, Free (use R_ forms
   available since R 3.4.0).
 
 The aim is to clean the namespace: in particular having a definition
