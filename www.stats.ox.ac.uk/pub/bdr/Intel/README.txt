@@ -1,5 +1,5 @@
 Checks of packages with C/C++/Fortran compiled code, using the
-Intel compilers icx/ipcx/ifx from oneAPI 2024.2.0 and oneMKL 2023.2.0,
+Intel compilers icx/ipcx/ifx from oneAPI 2024.2.1 and oneMKL 2023.2.0,
 with settings as described in 
 https://cran.r-project.org/doc/manuals/r-devel/R-admin.html#Intel-compilers
 
@@ -13,7 +13,7 @@ checks).  This causes some warnings like
 
 and those have been moved to sub-directory Old.
 
-The 2024.2.0 version of ifx has hardcoded liinks to the 2024.1.0 version of the 
+The 2024.2.0 version of ifx had hardcoded liinks to the 2024.1.0 version of the 
 C libraries, so a ln -s 2024.2.0 2024.1.0 in the 'oneapi/compiler' 
 directory was needed.
 
