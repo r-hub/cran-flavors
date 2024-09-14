@@ -1,3 +1,6 @@
+2024-09-13: this is no longer updated, but retained as it is
+refrerenced by some arvhivced check results.
+
 Checks of packages with C/C++/Fortran compiled code, using the
 Intel compilers icx/ipcx/ifx from oneAPI 2024.2.1 and oneMKL 2023.2.0,
 with settings as described in 
@@ -12,8 +15,3 @@ checks).  This causes some warnings like
   /usr/lib/gcc/x86_64-redhat-linux/12/../../../../include/c++/12/bits/stl_tempbuf.h:263:8: warning: 'get_temporary_buffer<arma::arma_sort_index_packet<double>>' is deprecated [-Wdeprecated-declarations]
 
 and those have been moved to sub-directory Old.
-
-The 2024.2.0 version of ifx had hardcoded liinks to the 2024.1.0 version of the 
-C libraries, so a ln -s 2024.2.0 2024.1.0 in the 'oneapi/compiler' 
-directory was needed.
-
