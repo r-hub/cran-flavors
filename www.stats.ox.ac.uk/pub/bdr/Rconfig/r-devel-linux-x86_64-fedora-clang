@@ -17,6 +17,26 @@ clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
 and install the libcxx-devel/libc++-dev package.
 
+For source https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.0/llvm-project-19.1.0.src.tar.xz
+
+via
+
+tar cf lvmorg-19.1.0/llvm-project-19.1.0.src.tar.xz
+ln -s  llvm-project-19.1.0.src lates
+mkdir build
+cd build
+cmake -G "Unix Makefiles" \
+-DCMAKE_INSTALL_PREFIX=/usr/local/clang19 \
+-DCMAKE_BUILD_TYPE:STRING=Release \
+-DLLVM_ENABLE_ASSERTIONS:BOOL=OFF \
+-DCMAKE_C_COMPILER=/usr/bin/clang \
+-DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
+-DLLVM_TARGETS_TO_BUILD=X86 \
+-DCLANG_DEFAULT_CXX_STDLIB=libc++ \
+-DLLVM_ENABLE_PROJECTS='clang;compiler-rt;openmp;flang' \
+-DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind' \
+-S ../latest/llvm
+
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
 
