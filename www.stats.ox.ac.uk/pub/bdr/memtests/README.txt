@@ -11,8 +11,8 @@ versions of the compilers.
 
 
 clnag-ASAN
-Using clang 18 built with libc++/libc++abi as the default C++ library,
-and flang-new 18 as the Fortran compiler. Note that the latter does
+Using clang 19 built with libc++/libc++abi as the default C++ library,
+and flang-new 19 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -36,8 +36,8 @@ setenv R_DONT_USE_TK true
 
 
 clang-UBSAN:
-Using clang 18 built with libc++/libc++abi as the default C++ library,
-and flang-new 18 as the Fortran compiler. Note that the latter does
+Using clang 19 built with libc++/libc++abi as the default C++ library,
+and flang-new 19 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -45,10 +45,10 @@ add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 An unaltered build of R was used, but each package was tested with 
 R_MAKEVARS_USER pointing to a file containing
 
-CC=/usr/local/clang18/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
-CXX=/usr/local/clang18/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
+CC=/usr/local/clang19/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
+CXX=/usr/local/clang19/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
 
-UBSAN_DIR = /usr/local/clang18/lib/clang/18/lib/x86_64-unknown-linux-gnu
+UBSAN_DIR = /usr/local/clang19/lib/clang/19/lib/x86_64-unknown-linux-gnu
 SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
 as discussed in 'Writing R Extensions'.
