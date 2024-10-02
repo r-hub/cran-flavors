@@ -1,17 +1,16 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 19.1.0 (C, C++), flang-new 19.1.0 (Fortran)
+clang 19.1.1 (C, C++), flang-new 19.1.1 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
+C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3"
 CPPFLAGS="-isystem /usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang18/lib -L/usr/local/lib64"
-
-[-Wno-error=enum-constexpr-conversion was needed in CXXFLAGS to compile mzR]
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang19/lib -L/usr/local/clang19/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
@@ -36,6 +35,12 @@ cmake -G "Unix Makefiles" \
 -DLLVM_ENABLE_PROJECTS='clang;compiler-rt;openmp;flang' \
 -DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind' \
 -S ../latest/llvm
+
+For packages that fail to compile with LLVM 19, earlier installations using
+18.1.8 are currently being used.  These are
+
+  RcppAlgos elrm epiworldR googlePolylines healthyaddress hutilscpp
+  mlpack raybevel rgeoda spNetwork sphereTessellation volesti BioC:gdsfmt
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
