@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 19.1.1 (C, C++), flang-new 19.1.1 (Fortran)
+clang 19.1.12(C, C++), flang-new 19.1.2 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -16,12 +16,12 @@ clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
 and install the libcxx-devel/libc++-dev package.
 
-For source https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.0/llvm-project-19.1.0.src.tar.xz
+For source https://github.com/llvm/llvm-project/releases/download/llvmorg-19.1.r20/llvm-project-19.1.2.src.tar.xz
 
 via
 
-tar cf lvmorg-19.1.0/llvm-project-19.1.0.src.tar.xz
-ln -s  llvm-project-19.1.0.src lates
+tar cf lvmorg-19.1.2/llvm-project-19.1.2.src.tar.xz
+ln -s  llvm-project-19.1.2.src latest
 mkdir build
 cd build
 cmake -G "Unix Makefiles" \
@@ -39,8 +39,8 @@ cmake -G "Unix Makefiles" \
 For packages that fail to compile with LLVM 19, earlier installations using
 18.1.8 are currently being used.  These are
 
-  RcppAlgos elrm epiworldR googlePolylines healthyaddress hutilscpp
-  mlpack raybevel rgeoda spNetwork sphereTessellation volesti BioC:gdsfmt
+  elrm googlePolylines healthyaddress hutilscpp
+  raybevel rgeoda spNetwork sphereTessellation BioC:gdsfmt
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
