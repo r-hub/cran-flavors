@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-15.1 'Sequoia' with Xcode/CLT 16 and the build of gfortran (a fork of
+15.1 'Sequoia' with Xcode/CLT 16.1 and the build of gfortran (a fork of
 14.1) from https://github.com/R-macos/gcc-14-branch/releases/tag/14.1-darwin)
 
 Timezone Europe/London
@@ -51,7 +51,7 @@ this may differ from the CRAN checks:
 - Later C/C++ compilers, different flags.
   Apple clang 14.0.3 it seems was a major update from 14.0.0, with
     many aspects of LLVM clang 15/16 having been ported.
-    Versions 15.0.0 seem a minor update from 14.0.3.
+    Versions 15.0.0 seems a minor update from 14.0.3.
     Versions 16.0.0 ported some changes from LLVM clang 19.
 - External software is (mainly) kept up-to-date -- see above.
     This includes using Java 21 and cmake, currently 3.30.3.
