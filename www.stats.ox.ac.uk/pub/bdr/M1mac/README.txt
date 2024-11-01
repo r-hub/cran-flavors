@@ -54,7 +54,7 @@ this may differ from the CRAN checks:
     Versions 15.0.0 seems a minor update from 14.0.3.
     Versions 16.0.0 ported some changes from LLVM clang 19.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes using Java 21 and cmake, currently 3.30.3.
+    This includes using Java 21 and cmake, currently 3.30.5.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI, currently 5.0.5.
 - Package INLA is installed -- requires a binary install on Macs.
 
@@ -62,7 +62,7 @@ Packages with non-default installs:
 
 sf: --configure-args='--with-data-copy --with-proj-data=/opt/R/arm64/share/proj'
 
-Several BioC packages have needed patching, currently EBImage Rdisop mzR
+Several BioC packages have needed patching, currently Rdisop
 
 Options used for 'R CMD check':
 
