@@ -1,3 +1,5 @@
+[2024-11-09: this is now the default on R-devel, so this is no lonver updated.]
+
 Tests with STRICT_R_HEADERS defined to 1. This removes
 
 - the legacy definition of PI (use POSIX's M_PI, available in R 'for ever').
