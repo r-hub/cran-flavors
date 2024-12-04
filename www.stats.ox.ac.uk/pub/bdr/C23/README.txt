@@ -14,9 +14,12 @@ https://thephd.dev/c23-is-coming-here-is-what-is-on-the-menu
 https://open-std.org/JTC1/SC22/WG14/www/docs/n3301.pdf
 
 Note that 'bool', 'false' and 'true' have become reserved words, and
-there are newly availablefunctions including iszero..
+there are newly available functions including iszero..
 
 Some of this, including the new reserved words, is also seen with gcc >= 13.
+For checks with gcc pre-15 (which defaults to C23), see
+https://www.stats.ox.ac.uk/pub/bdr/gcc15/
+
 
 tth also does not install using C23, but the current version has
 
