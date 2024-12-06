@@ -66,6 +66,15 @@ FFLAGS="-g -O2 -mtune=native"
 CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native"
 MAIN_LDFLAGS="-fsanitize=address,undefined -pthread"
 
+[2024-12-05: now bulding R with --enable-lto=R, hence adding
+
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LTO=-flto=10
+LTO_OPT=-flto
+
+]
+
 ~/.R/Makevars:
 CC = gcc-14 -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
 FC = gfortran-14 -fsanitize=address
