@@ -58,7 +58,7 @@ as discussed in 'Writing R Extensions'.
 
 gcc-ASAN, gcc-UBSAN:
 gcc 14.1 with config.site:
-CC=gcc-14
+CC="gcc-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3"
 FC=gfortran-14
