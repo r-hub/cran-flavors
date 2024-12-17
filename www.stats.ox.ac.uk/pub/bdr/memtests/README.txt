@@ -10,7 +10,7 @@ Results for archived packages will likely have been made with earilier
 versions of the compilers.
 
 
-clnag-ASAN
+clang-ASAN
 Using clang 19 built with libc++/libc++abi as the default C++ library,
 and flang-new 19 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
@@ -19,7 +19,7 @@ add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 
 config.site:
 CC="clang -fsanitize=addres-fno-omit-frame-pointer"
-CXX="clang++ -fsanitize=address,undefinedt -fno-omit-frame-pointer -frtti"
+CXX="clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -frtti"
 CFLAGS="-g -O3 -Wall -pedantic  -Wp,-D_FORTIFY_SOURCE=3"
 CXXFLAGS="-g -O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
@@ -57,7 +57,7 @@ as discussed in 'Writing R Extensions'.
 
 
 gcc-ASAN, gcc-UBSAN:
-gcc 14.1 with config.site:
+gcc 14.2 with config.site:
 CC="gcc-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3"
@@ -76,7 +76,7 @@ LTO_OPT=-flto
 ]
 
 ~/.R/Makevars:
-CC = gcc-14 -std=gnu99 -fsanitize=address,undefined -fno-omit-frame-pointer
+CC = gcc-14 -std=gnu99 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer
 FC = gfortran-14 -fsanitize=address
 
 and environment variables
