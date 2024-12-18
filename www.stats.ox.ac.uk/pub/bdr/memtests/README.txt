@@ -60,10 +60,10 @@ gcc-ASAN, gcc-UBSAN:
 gcc 14.2 with config.site:
 CC="gcc-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
-CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3"
+CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3 -Wno-stringop-truncation"
 FC=gfortran-14
 FFLAGS="-g -O2 -mtune=native"
-CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native"
+CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-deprecated-declarations -Wp,-D_FORTIFY_SOURCE=3 -Wno-stringop-truncation"
 MAIN_LDFLAGS="-fsanitize=address,undefined -pthread"
 
 [2024-12-05: now bulding R with --enable-lto=R, hence adding
@@ -74,6 +74,9 @@ LTO=-flto=10
 LTO_OPT=-flto
 
 ]
+
+Added -Wno-stringop-truncation following
+https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108939
 
 ~/.R/Makevars:
 CC = gcc-14 -std=gnu99 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer
