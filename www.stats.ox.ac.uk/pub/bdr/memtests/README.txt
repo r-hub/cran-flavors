@@ -20,9 +20,11 @@ add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 config.site:
 CC="clang -fsanitize=addres-fno-omit-frame-pointer"
 CXX="clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -frtti"
-CFLAGS="-g -O3 -Wall -pedantic  -Wp,-D_FORTIFY_SOURCE=3"
-CXXFLAGS="-g -O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
+CFLAGS="-g -O3 -Wall -pedantic"
+CXXFLAGS="-g -O3 -Wall -pedantiic"
+FC=flang-new
 FFLAGS="-O2 -pedantic"
+SHLIB_OPENMP_FFLAGS=
 
 and environment variables
 setenv ASAN_OPTIONS detect_leaks=0
@@ -33,7 +35,9 @@ setenv R_DONT_USE_TK true
 (There were ASAN errors in X libraries called from Tk initialization.)
 
 [Results prior to 2024-02-17 were made with clang 16 and gfortran 13.2.]
-
+[2024-12-19
+## fortify is said to be broken with sanitizers: https://discourse.llvm.org/t/asan-fortify-source/81056
+so is no longer used.]
 
 clang-UBSAN:
 Using clang 19 built with libc++/libc++abi as the default C++ library,
@@ -47,7 +51,6 @@ R_MAKEVARS_USER pointing to a file containing
 
 CC=/usr/local/clang19/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
 CXX=/usr/local/clang19/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
-
 UBSAN_DIR = /usr/local/clang19/lib/clang/19/lib/x86_64-unknown-linux-gnu
 SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
@@ -56,14 +59,15 @@ as discussed in 'Writing R Extensions'.
 [Results prior to 2024-02-17 were made with clang 16 and gfortran 13.2.]
 
 
+
 gcc-ASAN, gcc-UBSAN:
 gcc 14.2 with config.site:
 CC="gcc-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++-14 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
-CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wp,-D_FORTIFY_SOURCE=3 -Wno-stringop-truncation"
+CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wno-stringop-truncation"
 FC=gfortran-14
 FFLAGS="-g -O2 -mtune=native"
-CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-deprecated-declarations -Wp,-D_FORTIFY_SOURCE=3 -Wno-stringop-truncation"
+CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-deprecated-declarations -Wno-stringop-truncation"
 MAIN_LDFLAGS="-fsanitize=address,undefined -pthread"
 
 [2024-12-05: now bulding R with --enable-lto=R, hence adding
@@ -77,6 +81,7 @@ LTO_OPT=-flto
 
 Added -Wno-stringop-truncation following
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108939
+Dropped -Wp,-D_FORTIFY_SOURCE=3 : see the comment under clang-ASAN.
 
 ~/.R/Makevars:
 CC = gcc-14 -std=gnu99 -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer
