@@ -36,7 +36,7 @@ cmake -G "Unix Makefiles" \
 -DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind' \
 -S ../latest/llvm
 
-Two packages failed to install with clang 19: as these all used OpenMP
+Two packages failed to install with clang 19: as these both used OpenMP
 and fail to compile their OpenMP code, a build without OpenMP was used.
 These are
 
@@ -45,14 +45,13 @@ These are
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
 
-  JAGS ImageMagick boost_program_options gdal poppler protobuf
+  JAGS ImageMagick gdal poppler protobuf re2
 
 but subject to change.  Other C++ libraries, e.g. 
 
   GEOS PROJ SYMPHONY zeromq
 
 can use the system builds.
-(Boost was built with clang 14 as it fails to compile with 15 or later.)
 
 However, with the system PROJ there are frequent hangs in package tests,
 worked around by installing the same versions of GDAL and PROJ from 

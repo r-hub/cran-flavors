@@ -1,4 +1,7 @@
-Tests of memory access errors, on x86_64 Linux (currently Fedora 36).
+Tests of memory access errors, on x86_64 Linux
+==============================================
+
+(Currently using Fedora 36 except valgrind under Fedoora 38.)
 
 There is a directory for each package with a 00check.log file documenting the
 package version and the version of R used.  For {gcc,clang}-ASAN this may
@@ -102,8 +105,6 @@ currently using valgrind 3.21.0 on Fedora 38.
 
 configured by:
 .../configure -C --with-valgrind-instrumentation=2
-
-and formerly --with-system-valgrind-headers
 
 with config.site:
 
