@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 36 Linux
-clang 19.1.5 (C, C++), flang-new 19.1.5 (Fortran)
+clang 19.1.6 (C, C++), flang-new 19.1.6 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -20,8 +20,8 @@ For soures and some binary distrobutions see
 https://github.com/llvm/llvm-project/releases/
 Built via
 
-tar cf lvmorg-19.1.5/llvm-project-19.1.5.src.tar.xz
-ln -s  llvm-project-19.1.5.src latest
+tar cf lvmorg-19.1.6/llvm-project-19.1.6.src.tar.xz
+ln -s  llvm-project-19.1.6.src latest
 mkdir build
 cd build
 cmake -G "Unix Makefiles" \
@@ -60,14 +60,14 @@ their sources.  (Attempts to use later versions brought the hangs back.)
 ImageMagick is 7.0.10-25: versions of 7.1.0 did not work with
 package 'magick'.
 
-poppler is 24.03.0
+poppler is 24.03.0 (later versions failed to install)
 
 A local TexLive is used, updated nightly, currently 2024.
 
 Java 17.0.7 from Fedora 36 ('java-17-openjdk') is used.
 
 pandoc 3.6 from pandoc's binary distribution is used: Fedora's 2.14.0.3
-rather old.
+is too old.
 
 V8 was installed using g++, as v8's C++ interface is no longer compatible
 with libc++ .
