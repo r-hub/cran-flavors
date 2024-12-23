@@ -38,9 +38,9 @@ cmake -G "Unix Makefiles" \
 
 Two packages failed to install with clang 19: as these both used OpenMP
 and fail to compile their OpenMP code, a build without OpenMP was used.
-These are
+These are, cuurently,
 
-  healthyaddress hutilscpp
+  Rfast healthyaddress hutilscpp
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
