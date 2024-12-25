@@ -41,6 +41,8 @@ setenv R_DONT_USE_TK true
 [2024-12-19
 ## fortify is said to be broken with sanitizers: https://discourse.llvm.org/t/asan-fortify-source/81056
 so is no longer used.]
+[2024-12-23: selected revdeps are installed with ASAN, so results reflect
+buffere overflows etc in those revdeps.]
 
 clang-UBSAN:
 Using clang 19 built with libc++/libc++abi as the default C++ library,
