@@ -25,6 +25,7 @@ Many of the issues are from passing as.double(NULL) or as.integer(NULL)
 to .C or .Fortran where the compiled code expects to be pased a vector
 of lemgth at least one.
 
+[Support for this experimental check has been removed.]
 If R-devel is compiled with 
 
 -DR_LESS_COERCION_FROM_NULL
