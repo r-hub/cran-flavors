@@ -138,3 +138,6 @@ The following valgrind suppression file is used:
    fun:wcstombs
 }
 
+NB: there are  SSAN/UBSAN results for macOS at
+https://www.stats.ox.ac.uk/pub/bdr/M1-SAN/
+
