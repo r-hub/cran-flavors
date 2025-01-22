@@ -3,7 +3,7 @@ Tests on x86_64 Linux with R-devel using _R_CHECK_DONTTEST_EXAMPLES_=true
 Other details as 
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc 
 
-The latest results are with Fedora 38; earlier ones with F34.
+The latest results are with Fedora 40; earlier ones with F34, 36 or 38.
 
 Examples are selected by manual inspection so this may not be fully updated.
 
