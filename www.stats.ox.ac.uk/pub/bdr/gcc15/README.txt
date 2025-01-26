@@ -4,8 +4,6 @@ The current description of changes is
 
 https://gcc.gnu.org/gcc-15/changes.html
 
-this does not include the change in default C standard!
-
 See also
 
 https://gcc.gnu.org/gcc-15/porting_to.html
