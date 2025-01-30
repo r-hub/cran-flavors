@@ -1,8 +1,11 @@
+This recors packages with illegal accesses to 0-length R vector.
+
+[2025-01-29: All these packages have been archived and this area
+is no longer updated.]
+
 As fedora-gcc,
 
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc
-
-but without the DEFS line and so using C99 inlining semantics.
 
 We know
 Evacluster and plotmm are from EMCluster
