@@ -36,12 +36,6 @@ cmake -G "Unix Makefiles" \
 -DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind' \
 -S ../latest/llvm
 
-Two packages failed to install with clang 19: as these both used OpenMP
-and fail to compile their OpenMP code, a build without OpenMP was used.
-These are, cuurently,
-
-  Rfast healthyaddress hutilscpp
-
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
 
@@ -69,8 +63,8 @@ Java 17.0.7 from Fedora 36 ('java-17-openjdk') is used.
 pandoc 3.6.2 from pandoc's binary distribution is used: Fedora's 2.14.0.3
 is too old.
 
-V8 was installed using g++, as v8's C++ interface is no longer compatible
-with libc++ .
+V8 was installed using the static library it makes available via
+the environment variable DOWNLOAD_STATIC_LIBV8=1.
 
 OpenBUGS-3.2.3 (using i686 gcc) was installed from source.
 TkTable 2.10 was installed from source.
