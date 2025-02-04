@@ -24,7 +24,6 @@ R_LD_LIBRARY_PATH=/opt/R/arm64/lib
 and configured with
 
 ~/R/svn/R-devel/configure -C \
-
 --with-C23 \
 --enable-R-shlib --enable-memory-profiling \
 --with-tcl-config=/opt/R/arm64/lib/tclConfig.sh \
