@@ -83,6 +83,7 @@ LTO_OPT=-flto
 [2024-12-23: selected revdeps are installed with ASAN/UBSAN, so results reflect
 buffere overflows etc in those revdeps.]
 
+[2025-02-14: experimentally using gcc pre-15.]
 Added -Wno-stringop-truncation following
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108939
 Dropped -Wp,-D_FORTIFY_SOURCE=3 : see the comment under clang-ASAN.
