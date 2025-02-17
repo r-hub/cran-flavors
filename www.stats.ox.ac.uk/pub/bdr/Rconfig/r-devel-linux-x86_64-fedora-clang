@@ -4,6 +4,8 @@ clang 19.1.7 (C, C++), flang-new 19.1.7 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
+[20215-02-16: testing 20.1.0-rc2: this reports flang rather than flang-new.]
+
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
