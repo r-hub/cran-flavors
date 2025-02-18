@@ -1,3 +1,6 @@
+2025-02-17: as C23 is nnow the default, this will not be updated.
+-----------------------------------------------------------------
+
 Tests as for fedora-clang but using
 
 CC='clang -std=gnu23'
