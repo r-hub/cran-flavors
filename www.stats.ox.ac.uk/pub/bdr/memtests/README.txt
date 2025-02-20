@@ -14,8 +14,8 @@ versions of the compilers.
 
 
 clang-ASAN
-Using clang 19 built with libc++/libc++abi as the default C++ library,
-and flang-new 19 as the Fortran compiler. Note that the latter does
+Using clang 20 built with libc++/libc++abi as the default C++ library,
+and flang 20 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -44,8 +44,8 @@ so is no longer used.]
 buffere overflows etc in those revdeps.]
 
 clang-UBSAN:
-Using clang 19 built with libc++/libc++abi as the default C++ library,
-and flang-new 19 as the Fortran compiler. Note that the latter does
+Using clang 20 built with libc++/libc++abi as the default C++ library,
+and flang 20 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -55,7 +55,7 @@ R_MAKEVARS_USER pointing to a file containing
 
 CC=/usr/local/clang19/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
 CXX=/usr/local/clang19/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
-UBSAN_DIR = /usr/local/clang19/lib/clang/19/lib/x86_64-unknown-linux-gnu
+UBSAN_DIR = /usr/local/clang20/lib/clang/20/lib/x86_64-unknown-linux-gnu
 SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
 as discussed in 'Writing R Extensions'.
@@ -83,7 +83,6 @@ LTO_OPT=-flto
 [2024-12-23: selected revdeps are installed with ASAN/UBSAN, so results reflect
 buffere overflows etc in those revdeps.]
 
-[2025-02-14: experimentally using gcc pre-15.]
 Added -Wno-stringop-truncation following
 https://gcc.gnu.org/bugzilla/show_bug.cgi?id=108939
 Dropped -Wp,-D_FORTIFY_SOURCE=3 : see the comment under clang-ASAN.
@@ -133,6 +132,6 @@ The following valgrind suppression file is used:
    fun:wcstombs
 }
 
-NB: there are  SSAN/UBSAN results for macOS at
+NB: there are  ASAN/UBSAN results for macOS at
 https://www.stats.ox.ac.uk/pub/bdr/M1-SAN/
 

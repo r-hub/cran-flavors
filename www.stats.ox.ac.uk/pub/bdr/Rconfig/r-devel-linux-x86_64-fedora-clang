@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 40 Linux
-clang 19.1.7 (C, C++), flang-new 19.1.7 (Fortran)
+clang 20.1.x (C, C++), flang-new 20.1.x (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -63,8 +63,9 @@ A local TexLive is used, updated nightly, currently 2024.
 
 Java 21 is used.
 
-pandoc 3.6.2 from pandoc's binary distribution is used: Fedora's 3.1.3
+pandoc 3.6.3 from pandoc's binary distribution is used: Fedora's 3.1.3
 is too old.
+
 ghostscript is 10.4.0, compiled from source.
 
 V8 was installed using the static library it makes available via
