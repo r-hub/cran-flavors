@@ -4,8 +4,6 @@ clang 20.1.x (C, C++), flang 20.1.x (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
-[20215-02-16: testing 20.1.0-rc2: this reports flang rather than flang-new.]
-
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
@@ -22,12 +20,12 @@ For soures and some binary distrobutions see
 https://github.com/llvm/llvm-project/releases/
 Built via
 
-tar cf lvmorg-19.1.7/llvm-project-19.1.7.src.tar.xz
-ln -s  llvm-project-19.1.7.src latest
+tar cf lvmorg-20.1.0/llvm-project-20.1.0.src.tar.xz
+ln -s  llvm-project-20.1.0.src latest
 mkdir build
 cd build
 cmake -G "Unix Makefiles" \
--DCMAKE_INSTALL_PREFIX=/usr/local/clang19 \
+-DCMAKE_INSTALL_PREFIX=/usr/local/clang20 \
 -DCMAKE_BUILD_TYPE:STRING=Release \
 -DLLVM_ENABLE_ASSERTIONS:BOOL=OFF \
 -DCMAKE_C_COMPILER=/usr/bin/clang \
