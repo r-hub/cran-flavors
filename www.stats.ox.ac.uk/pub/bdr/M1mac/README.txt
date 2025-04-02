@@ -1,6 +1,6 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-15.4 'Sequoia' with Xcode/CLT 16.3RC and the build of gfortran
-(a fork of 14.2) from https://github.com/R-macos/gcc-14-branch/releases)
+15.4 'Sequoia' with Xcode/CLT 16.3 and the build of gfortran (a fork
+of 14.2) from https://github.com/R-macos/gcc-14-branch/releases)
 
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
@@ -24,7 +24,6 @@ R_LD_LIBRARY_PATH=/opt/R/arm64/lib
 and configured with
 
 ~/R/svn/R-devel/configure -C \
---with-C23 \
 --enable-R-shlib --enable-memory-profiling \
 --with-tcl-config=/opt/R/arm64/lib/tclConfig.sh \
 --with-tk-config=/opt/R/arm64/lib/tkConfig.sh \
@@ -64,12 +63,12 @@ this may differ from the CRAN checks:
 - Later C/C++ compilers, different flags.
   Apple clang 14.0.3 was a major update from 14.0.0, with many aspects
     of LLVM clang 15/16 having been ported.
-    Version 15.0.0 was a minor update from 14.0.3, includes suppoert for C23.
-    Version 16.0.0 ported some changes from LLVM clang 19.
-    Version 17.0.0 ported some changes from LLVM clang 20, including
+  Version 15.0.0 was a minor update from 14.0.3, includes suppoert for C23.
+  Version 16.0.0 ported some changes from LLVM clang 19.
+  Version 17.0.0 ported some changes from LLVM clang 20, including
     accepting -std=gnu23.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes Java 21 and cmake, currently 4.0.0rc5
+    This includes Java 21 and cmake, currently 4.0.0.
     OpenMPI is installed for Rmpi, bigGP and pbdMPI, currently 5.0.7.
 - Package INLA is installed -- requires a binary install on Macs.
 
