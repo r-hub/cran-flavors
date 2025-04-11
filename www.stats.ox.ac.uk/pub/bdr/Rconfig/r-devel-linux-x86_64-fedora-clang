@@ -126,6 +126,8 @@ setenv _R_CHECK_RD_MATH_RENDERING_ true
 
 setenv _R_CHECK_COMPILATION_FLAGS_KNOWN_ "-Werror=implicit-function-declaration -Wno-error=enum-constexpr-conversion -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
 
+## until knitr is updates:
+setenv R_KNITR_OPTIONS 'knitr.chunk.optipng="-quiet"'
 
 Note
 
