@@ -63,6 +63,7 @@ as discussed in 'Writing R Extensions'.
 [2024-12-23: selected revdeps are installed with UBSAN.]
 
 gcc-ASAN, gcc-UBSAN:
+[2025-04-21: using gcc 15.0.1RC]
 gcc 14.2 with config.site:
 CC="gcc -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
