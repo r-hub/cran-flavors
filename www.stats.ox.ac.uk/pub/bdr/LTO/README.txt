@@ -1,4 +1,4 @@
-Compilation logs for CRAN packages using x86_64 Fedora 34 Linux 
+Compilation logs for CRAN packages using x86_64 Fedora 40 Linux 
 built with configure --enable-lto=R and config.site:
 
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native"
