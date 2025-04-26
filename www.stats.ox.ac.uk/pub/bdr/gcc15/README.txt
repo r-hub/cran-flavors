@@ -12,7 +12,7 @@ Other details as https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64
 
 Debian unstable and Ubuntu have a package 'gcc-snapshot'.
 
-GCC 15 is planned for release on 2025-04-25
+GCC 15 was released on 2025-04-25
 
 This area is no longer update as the mainstream checks will or have move to
 GCC 15.1.
