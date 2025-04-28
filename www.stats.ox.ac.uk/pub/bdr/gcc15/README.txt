@@ -8,6 +8,9 @@ See also
 
 https://gcc.gnu.org/gcc-15/porting_to.html
 
+Also (a late change) header omp.h defines 'omp' as a C++ namespace and so
+if cannot tbe used as an identifier, e.g. a function name.
+
 Other details as https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc
 
 Debian unstable and Ubuntu have a package 'gcc-snapshot'.
