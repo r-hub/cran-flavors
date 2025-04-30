@@ -57,7 +57,7 @@ patching for libxml2 changes.
 
 poppler is 24.03.0 (later versions failed to install)
 
-A local TexLive is used, updated nightly, currently 2024.
+A local TexLive is used, updated nightly, currently 2025.
 
 Java 21 is used.
 
@@ -66,14 +66,13 @@ is too old.
 
 ghostscript is 10.5.0, compiled from source.
 
+Package penBUGS-3.2.3 (using i686 gcc) was installed from source.
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.
 
-OpenBUGS-3.2.3 (using i686 gcc) was installed from source.
 TkTable 2.10 was installed from source.
 
-Several BioC packages have broken C++ and needed to be patched.  Currently
-Rdisop: gdsfmt remaoins broken.
+Several BioC packages have broken C++ and needed to be patched.
 
 This is currently using the environment variables
 

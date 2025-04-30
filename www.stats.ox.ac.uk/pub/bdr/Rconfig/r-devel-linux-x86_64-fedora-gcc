@@ -10,7 +10,7 @@ CFLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORT
 C17FLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORTIFY_SOURCE=3 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection -Werror=implicit-function-declaration"
 FFLAGS="-g -O2 -mtune=native -Wall -pedantic"
 CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-parentheses -Werror=format-security -Wp,-D_FORTIFY_SOURCE=3 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection"
-JAVA_HOME=/usr/lib/jvm/java-11
+JAVA_HOME=/usr/lib/jvm/java-21
 AR=gcc-ar
 RANLIB=gcc-ranlib
 LTO=-flto=10
@@ -28,15 +28,18 @@ This uses the system LAPACK, which is currently 3.12.0.
 Java 21 is used.
 
 pandoc 3.6.4 from pandoc's binary distribution is used: Fedora's 3.1.3
-rather old.
+is rather old.
 
 ghostscript is 10.5.0, compiled from source.
 
-A local TexLive is used, updated nightly, currently 2024.
+A local TexLive is used, updated nightly, currently 2025.
 
 JAGS-4.3.2 was installed from source.
-OpenBUGS-3.2.3 is installed using Fedora's i686 toolchain.
 TkTable 2.10 was installed from source.
+QuantLib is 1.37 installed from source: F40's 1.29 is rather old.
+
+[For former package BRusgs: OpenBUGS-3.2.3 was installed using 
+Fedora's i686 toolchain.]
 
 This is currently using the environment variables
 
