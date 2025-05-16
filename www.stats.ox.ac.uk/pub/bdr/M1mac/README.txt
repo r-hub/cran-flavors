@@ -39,9 +39,9 @@ which need to use dynamic libraries (such as openmpi and libmariadb).
 Currently this uses PROJ 9.6.0, GEOS 3.13.1, GDAL 3.11.0.  (GDAL needs
 manual patching of gdal-config, so not installed via recioes.)
 
-pandoc is their binary arm64 Mac build, currently 3.6.4 (and updated often).
+pandoc is their binary arm64 Mac build, currently 3.7 (and updated often).
 
-Java is 21.0.6 from https://adoptium.net
+Java is 21.0.7 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
