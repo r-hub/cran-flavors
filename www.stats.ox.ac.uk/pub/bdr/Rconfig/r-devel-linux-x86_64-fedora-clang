@@ -20,8 +20,8 @@ For soures and some binary distrobutions see
 https://github.com/llvm/llvm-project/releases/
 Built via
 
-tar cf lvmorg-20.1.0/llvm-project-20.1.0.src.tar.xz
-ln -s  llvm-project-20.1.0.src latest
+tar cf lvmorg-20.1.x/llvm-project-20.1.x.src.tar.xz
+ln -s  llvm-project-20.1.x.src latest
 mkdir build
 cd build
 cmake -G "Unix Makefiles" \
@@ -62,11 +62,10 @@ A local TexLive is used, updated nightly, currently 2025.
 Java 21 is used.
 
 pandoc 3.7 from pandoc's binary distribution is used: Fedora's 3.1.3
-is too old.
+is far too old.
 
 ghostscript is 10.5.0, compiled from source.
 
-Package penBUGS-3.2.3 (using i686 gcc) was installed from source.
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.
 

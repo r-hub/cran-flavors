@@ -27,7 +27,7 @@ This uses the system LAPACK, which is currently 3.12.0.
 
 Java 21 is used.
 
-pandoc 3.7 from pandoc's binary distribution is used: Fedora's 3.1.3
+pandoc 3.7 from pandoc's binary distribution is used.
 is rather old.
 
 ghostscript is 10.5.0, compiled from source.
@@ -38,7 +38,7 @@ JAGS-4.3.2 was installed from source.
 TkTable 2.10 was installed from source.
 QuantLib is 1.37 installed from source: F40's 1.29 is rather old.
 
-[For former package BRusgs: OpenBUGS-3.2.3 was installed using 
+[For former package BRugs: OpenBUGS-3.2.3 was installed using 
 Fedora's i686 toolchain.]
 
 This is currently using the environment variables
@@ -88,6 +88,6 @@ setenv R_KNITR_OPTIONS 'knitr.chunk.optipng="-quiet"'
 Note the _R_CHECK_SUGGESTS_ONLY_ setting, which is different from the
 the Fedora-clang runs (and the CRAN Debian check runs).
 
-A parellel make is used and packages are checked in parallel --
+A parallel make is used and packages are checked in parallel --
 installing or checking a single package may use up to 30 CPUs.
 
