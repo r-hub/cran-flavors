@@ -17,5 +17,5 @@ Debian unstable and Ubuntu have a package 'gcc-snapshot'.
 
 GCC 15 was released on 2025-04-25
 
-This area is no longer update as the mainstream checks will or have move to
-GCC 15.1.
+This area is no longer updated as the mainstream checks have moved to
+GCC 15.1.0.
