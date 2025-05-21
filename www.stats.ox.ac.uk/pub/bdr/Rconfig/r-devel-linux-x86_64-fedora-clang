@@ -1,3 +1,6 @@
+(2025-05-21: transitioing to Fedora 42, which supplies GCC 15.1.0 and
+uses Tcl/Tk 9 as its default.)
+
 R-devel
 x86_64 Fedora 40 Linux
 clang 20.1.x (C, C++), flang 20.1.x (Fortran)
@@ -51,7 +54,7 @@ ImageMagick can be installed using clang++/libc++ without JPEG support, but
 package magick does not load when built against it.  Instead a build using
 g++ is used.
 
-gdal 3.8.5 (the version supplied by Fedora) failed to compile with clang.
+gdal 3.8.5 (the version supplied by Fedora 40) failed to compile with clang.
 We used 3.5.3 (the last version using make not cmake) but that needed
 patching for libxml2 changes.
 
@@ -64,7 +67,7 @@ Java 21 is used.
 pandoc 3.7 from pandoc's binary distribution is used: Fedora's 3.1.3
 is far too old.
 
-ghostscript is 10.5.0, compiled from source.
+ghostscript is 10.05.0, compiled from source.
 
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.

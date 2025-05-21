@@ -1,3 +1,6 @@
+(2025-05-21: transitioing to Fedora 42, which supplies GCC 15.1.0 and 
+uses Tcl/Tk 9 as its default.)
+
 R-devel
 x86_64 Fedora 40 Linux
 GCC 15.1.0 (C, C++, Fortran)
