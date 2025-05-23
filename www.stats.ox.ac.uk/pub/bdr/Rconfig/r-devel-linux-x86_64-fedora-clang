@@ -1,8 +1,5 @@
-(2025-05-21: transitioing to Fedora 42, which supplies GCC 15.1.0 and
-uses Tcl/Tk 9 as its default.)
-
 R-devel
-x86_64 Fedora 40 Linux
+x86_64 Fedora 42 Linux
 clang 20.1.x (C, C++), flang 20.1.x (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
