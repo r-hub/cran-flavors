@@ -1,7 +1,7 @@
 Tests of memory access errors, on x86_64 Linux
 ==============================================
 
-(Currently using Fedora 40.)
+(Currently using Fedora 42.)
 
 There is a directory for each package with a 00check.log file documenting the
 package version and the version of R used.  For {gcc,clang}-ASAN this may
@@ -9,7 +9,7 @@ also report errors, including from examples.
 
 How to run and interpret these (with links to further information) is in §4.3 of 'Writing R Extensions'.  The settings used are listed by sub-directory in the rest of this file.
 
-Results for archived packages will likely have been made with earilier 
+Results for archived packages will likely have been made with earlier 
 versions of the compilers.
 
 
