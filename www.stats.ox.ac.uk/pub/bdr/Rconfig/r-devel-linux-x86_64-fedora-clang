@@ -10,7 +10,7 @@ C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
 CPPFLAGS="-isystem /usr/local/clang19/include -I/usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang19/lib -L/usr/local/clang19/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang20/lib -L/usr/local/clang19/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
@@ -39,7 +39,7 @@ cmake -G "Unix Makefiles" \
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
 
-  JAGS gdal poppler protobuf re2
+  JAGS adsl* gdal poppler protobuf
 
 but subject to change.  Other C++ libraries, e.g. 
 
@@ -51,7 +51,7 @@ ImageMagick can be installed using clang++/libc++ without JPEG support, but
 package magick does not load when built against it.  Instead a build using
 g++ is used.
 
-Installing poppler failed: it attempts to use gcc for part of the installation.
+Installing recent poppler failed: it attempts to use gcc for part of the installation.
 
 gdal 3.10.3 (the version supplied by Fedora 42) was compiled from source,
 skipping poppler.
@@ -67,6 +67,8 @@ ghostscript is 10.05.0 from Fedora.
 
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.
+
+JAGS-4.3.2 was installed from source.
 
 TkTable 2.10 was installed from source.
 
@@ -121,7 +123,7 @@ setenv _R_CHECK_RD_MATH_RENDERING_ true
 
 setenv _R_CHECK_COMPILATION_FLAGS_KNOWN_ "-Werror=implicit-function-declaration -Wno-error=enum-constexpr-conversion -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
 
-## until knitr is updates:
+## until knitr is updated:
 setenv R_KNITR_OPTIONS 'knitr.chunk.optipng="-quiet"'
 
 Note

@@ -1,6 +1,6 @@
 R-devel
 x86_64 Fedora 42 Linux
-GCC 15.1.1 (C, C++, Fortran)
+GCC 15.1.1 (C, C++, Fortran) from Fedora
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -30,7 +30,7 @@ Java 21 is used.
 pandoc 3.7 from pandoc's binary distribution is used: Fedora's 3.1.11.1
 is far too old.
 
-ghostscript is 10.5.0.
+ghostscript is 10.5.0 from Fedora
 
 A local TexLive is used, updated nightly, currently 2025.
 
@@ -82,7 +82,7 @@ setenv _R_CHECK_XREFS_USE_ALIASES_FROM_CRAN_ TRUE
 setenv _R_CHECK_MBCS_CONVERSION_FAILURE_ true
 setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
-## until knitr is updates:
+## until knitr is updated:
 setenv R_KNITR_OPTIONS 'knitr.chunk.optipng="-quiet"'
 
 Note the _R_CHECK_SUGGESTS_ONLY_ setting, which is different from the
