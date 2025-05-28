@@ -58,6 +58,8 @@ skipping poppler.
 
 A local TexLive is used, updated nightly, currently 2025.
 
+Fedora 42 defaults to Tcl/Tk 9.
+
 Java 21 is used.
 
 pandoc 3.7 from pandoc's binary distribution is used: Fedora's 3.1.11.1
