@@ -72,7 +72,7 @@ the environment variable DOWNLOAD_STATIC_LIBV8=1.
 
 JAGS-4.3.2 was installed from source.
 
-TkTable 2.10 was installed from source.
+TkTable 2.12 was installed from source.
 
 This is currently using the environment variables
 

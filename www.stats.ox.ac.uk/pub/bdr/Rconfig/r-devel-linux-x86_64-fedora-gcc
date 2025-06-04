@@ -37,7 +37,7 @@ ghostscript is 10.5.0 from Fedora
 A local TexLive is used, updated nightly, currently 2025.
 
 JAGS-4.3.2 was installed from source.
-TkTable 2.10 was installed from source.
+TkTable 2.12 was installed from source.
 QuantLib is 1.37 installed from source: F40's 1.29 is rather old.
 
 [For former package BRugs: OpenBUGS-3.2.3 was installed using 
