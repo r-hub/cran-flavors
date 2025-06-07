@@ -47,10 +47,6 @@ but subject to change.  Other C++ libraries, e.g.
 
 can use the system builds.
 
-ImageMagick can be installed using clang++/libc++ without JPEG support, but
-package magick does not load when built against it.  Instead a build using
-g++ is used.
-
 Installing recent poppler failed: it attempts to use gcc for part of the installation.
 
 gdal 3.10.3 (the version supplied by Fedora 42) was compiled from source,
