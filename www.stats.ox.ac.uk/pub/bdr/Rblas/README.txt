@@ -5,7 +5,7 @@ https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc
 ATLAS:
 Serial ATLAS using the Fedora shared libraries. (Currently version 3.10.3.)
 libRblas.so was replaced by a symlink to /usr/lib64/atlas/libsatlas.so .
-It reports using LAPACK 3.10.0.
+It reports using LAPACK 3.12.0.
 
 MKL:
 Intel MKL '2023.2.0' used to build Rblas and also provides LAPACK
@@ -18,9 +18,9 @@ setenv MKL "-L$MKL_LIB_PATH -lmkl_gf_lp64 -lmkl_core -lmkl_sequential"
 
 OpenBLAS:
 
-Serial OpenBLAS using the Fedora shared libraries (currently version 0.3.19).
+Serial OpenBLAS using the Fedora shared libraries (currently version 0.3.29).
 libRblas.so was replaced by a symlink to /usr/lib64/libopenblas.so (part of
-openblas-devel, linked from openblas-serial). This reports using LAPACK 3.9.0.
+openblas-devel, linked from openblas-serial). This reports using LAPACK 3.12.0.
 
 Pto tem, using
 
