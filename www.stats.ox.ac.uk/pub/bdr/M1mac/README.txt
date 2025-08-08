@@ -1,5 +1,5 @@
-Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-15.6 'Sequoia' with Xcode/CLT 26 beta 4 (hence Apple clang 17) and the
+Check results using R-devel on an arm66 ('M1 Pro') Mac running macOS
+15.6 'Sequoia' with Xcode/CLT 26 beta 5 (hence Apple clang 17) and the
 build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
