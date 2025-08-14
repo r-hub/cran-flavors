@@ -1,4 +1,4 @@
-Tests using R-devel on x86_64 Fedora 34 Linux with alternative BLAS/LAPACK
+Tests using R-devel on x86_64 Fedora 42 Linux with alternative BLAS/LAPACK
 implementations.  Except as noted below, R was configured as per
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc
 
