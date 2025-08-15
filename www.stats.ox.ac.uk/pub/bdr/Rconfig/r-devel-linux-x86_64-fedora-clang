@@ -4,8 +4,7 @@ clang 20.1.8 (C, C++), flang 20.1.8 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
-[2025-08-04r:; in process of switching to LLVM 21.0.0-rc2.
-   OpenMP is broken, so configured with --disable-openmp.]
+[2025-08-04r:; in process of switching to LLVM 21.0.0-rc3.]
 
 configured with --without-lapack and config.site:
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
