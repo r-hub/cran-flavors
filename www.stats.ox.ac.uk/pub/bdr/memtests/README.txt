@@ -3,6 +3,10 @@ Tests of memory access errors, on x86_64 Linux
 
 (Currently using Fedora 42.)
 
+[2025-08-14; in process of switching to clang/flang 21.0.0-rc3.
+The logs show which compiler was used.]
+
+
 There is a directory for each package with a 00check.log file documenting the
 package version and the version of R used.  For {gcc,clang}-ASAN this may
 also report errors, including from examples.
