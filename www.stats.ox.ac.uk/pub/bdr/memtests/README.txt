@@ -3,10 +3,6 @@ Tests of memory access errors, on x86_64 Linux
 
 (Currently using Fedora 42.)
 
-[2025-08-14; in process of switching to clang/flang 21.0.0-rc3.
-The logs show which compiler was used.]
-
-
 There is a directory for each package with a 00check.log file documenting the
 package version and the version of R used.  For {gcc,clang}-ASAN this may
 also report errors, including from examples.
@@ -18,8 +14,8 @@ versions of the compilers.
 
 
 clang-ASAN
-Using clang 20 built with libc++/libc++abi as the default C++ library,
-and flang 20 as the Fortran compiler. Note that the latter does
+Using clang 21 built with libc++/libc++abi as the default C++ library,
+and flang 21 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -48,8 +44,8 @@ so is no longer used.]
 buffere overflows etc in those revdeps.]
 
 clang-UBSAN:
-Using clang 20 built with libc++/libc++abi as the default C++ library,
-and flang 20 as the Fortran compiler. Note that the latter does
+Using clang 21 built with libc++/libc++abi as the default C++ library,
+and flang 21 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -67,8 +63,7 @@ as discussed in 'Writing R Extensions'.
 [2024-12-23: selected revdeps are installed with UBSAN.]
 
 gcc-ASAN, gcc-UBSAN:
-[2025-04-21: using gcc 15.0.1RC]
-gcc 14.2 with config.site:
+gcc 15.1 with config.site:
 CC="gcc -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wno-stringop-truncation  -Wno-alloc-size-larger-than"
