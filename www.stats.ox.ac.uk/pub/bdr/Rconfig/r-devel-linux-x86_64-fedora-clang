@@ -1,10 +1,10 @@
 R-devel
 x86_64 Fedora 42 Linux
-clang 20.1.8 (C, C++), flang 20.1.8 (Fortran)
+clang 21.0.8 (C, C++), flang 21.0.8 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
-[2025-08-14; in process of switching to LLVM 21.0.0-rc3.
+[2025-08-14; switching to LLVM 21.0.0-rc3.
 The logs show which compiler was used.]
 
 configured with --without-lapack and config.site:
@@ -13,7 +13,7 @@ C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
 CPPFLAGS="-isystem /usr/local/clang19/include -I/usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang20/lib -L/usr/local/clang20/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang21/lib -L/usr/local/clang21/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 
 clang was built to use libc++: for a version built to default to libstdc++
 (as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
