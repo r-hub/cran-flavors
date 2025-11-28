@@ -1,3 +1,10 @@
+[2025-11-27 temporarily using
+
+CXX14STD=$(CXX17STD)
+CXX11STD=$(CXX17STD)
+
+to see the effects of dropping support for C++11/14.]
+
 R-devel
 x86_64 Fedora 42 Linux
 clang 21.1.6 (C, C++), flang 21.1.6 (Fortran)
@@ -121,6 +128,10 @@ setenv _R_CHECK_RD_VALIDATE_RD2HTML_ true
 setenv _R_CHECK_RD_MATH_RENDERING_ true
 
 setenv _R_CHECK_COMPILATION_FLAGS_KNOWN_ "-Werror=implicit-function-declaration -Wno-error=enum-constexpr-conversion -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
+
+setenv JAGS_LIB /usr/local/clang/lib64
+setenv DOWNLOAD_STATIC_LIBV8 1
+setenv ARROW_R_DEV true
 
 ## until knitr is updated:
 setenv R_KNITR_OPTIONS 'knitr.chunk.optipng="-quiet"'
