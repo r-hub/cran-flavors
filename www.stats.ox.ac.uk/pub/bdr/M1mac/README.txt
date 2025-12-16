@@ -39,6 +39,14 @@ which need to use dynamic libraries (such as openmpi and libmariadb).
 Currently this uses PROJ 9.7.0, GEOS 3.14.0, GDAL 3.12.0.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
 
+Apple provides iODBC libraries but no longer ships the headers, which
+can be found via https://opensource.apple.com/releases/ .  (They have
+not changed for many years, so for example
+
+https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
+
+should continue to work.)
+
 pandoc is their binary arm64 Mac build, currently 3.8.3 (and updated often).
 
 Java is 25 from https://adoptium.net
