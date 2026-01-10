@@ -21,11 +21,11 @@ not yet support sanitizers.
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 
 config.site:
-CC="clang -fsanitize=addres-fno-omit-frame-pointer"
+CC="clang -fsanitize=address,undefined -fno-omit-frame-pointer"
 CXX="clang++ -fsanitize=address,undefined -fno-omit-frame-pointer -frtti"
 CFLAGS="-g -O3 -Wall -pedantic"
 CXXFLAGS="-g -O3 -Wall -pedantiic"
-FC=flang-new
+FC=flang
 FFLAGS="-O2 -pedantic"
 SHLIB_OPENMP_FFLAGS=
 
