@@ -1,10 +1,3 @@
-[2025-11-27 temporarily using
-
-CXX14STD=$(CXX17STD)
-CXX11STD=$(CXX17STD)
-
-to see the effects of dropping support for C++11/14.]
-
 R-devel
 x86_64 Fedora 42 Linux
 GCC 15.1.1 (C, C++, Fortran) from Fedora
