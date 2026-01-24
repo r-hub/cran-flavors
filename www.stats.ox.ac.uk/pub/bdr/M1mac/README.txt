@@ -1,4 +1,4 @@
-[2026-01-20: checkw are done using C++20, prior to that being made the
+[2026-01-20: checks are done using C++20, prior to that being made the
 default in R-devel and then R 4.6.0.  See
 https://www.stats.ox.ac.uk/pub/bdr/C++20/README.txt .]
 
@@ -82,7 +82,7 @@ this may differ from the CRAN checks:
   Version 17.0.0 ported some changes from LLVM clang 20, including
     accepting -std=gnu23.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes Java 25 and cmake, currently 4.2.0.
+    This includes Java 25 and cmake, currently 4.2.2.
     OpenMPI is installed for Rmpi, bigGP, pbdMPI and pbdSLAP, currently 5.0.8.
 - Package INLA is installed -- requires a binary install on Macs.
 - Recently the CRAN M1 checks have OpenMP enabled, which is
