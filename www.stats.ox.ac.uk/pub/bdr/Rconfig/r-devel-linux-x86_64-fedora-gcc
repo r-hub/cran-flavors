@@ -1,3 +1,7 @@
+[2024-02-20: this will shortly move to a snapshot og GGC 16.
+Details and results for packages with compiled code can be seen at
+https://www.stats.ox.ac.uk/pub/bdr/gcc16/ ]
+
 R-devel
 x86_64 Fedora 42 Linux
 GCC 15.1.1 (C, C++, Fortran) from Fedora
