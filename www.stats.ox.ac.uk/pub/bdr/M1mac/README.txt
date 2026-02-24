@@ -1,7 +1,10 @@
-Check results using R-devel on an arm66 ('M1 Pro') Mac running macOS
+Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
 26.3 'Tahoe' with Xcode/CLT 26.4 beta (hence Apple clang 21) and the
 build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
+
+[According to https://en.wikipedia.org/wiki/Xcode that version of Apple
+clang corresponds to LLVM clang 21.1.6.]
 
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
