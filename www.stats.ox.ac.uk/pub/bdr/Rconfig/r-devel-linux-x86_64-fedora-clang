@@ -1,3 +1,5 @@
+[2026-02-27: in the process of updating to clang/flang 21.1.0.]
+
 R-devel
 x86_64 Fedora 42 Linux
 clang 21.1.8 (C, C++), flang 21.1.8 (Fortran)
@@ -59,7 +61,7 @@ Fedora 42 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
-pandoc 3.8.3 from pandoc's binary distribution is used: Fedora's 3.1.11.1
+pandoc 3.9 from pandoc's binary distribution is used: Fedora's 3.1.11.1
 is far too old.
 
 ghostscript is 10.05.0 from Fedora.
