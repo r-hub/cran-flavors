@@ -64,7 +64,7 @@ Java 25 is used.
 pandoc 3.9 from pandoc's binary distribution is used: Fedora's 3.1.11.1
 is far too old.
 
-ghostscript is 10.05.0 from Fedora.
+ghostscript is 10.05.1 from Fedora.
 
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.
