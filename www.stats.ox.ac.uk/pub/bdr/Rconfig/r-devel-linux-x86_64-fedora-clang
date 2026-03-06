@@ -1,43 +1,26 @@
-[2026-02-27: in the process of updating to clang/flang 21.1.0.]
 
 R-devel
 x86_64 Fedora 42 Linux
-clang 21.1.8 (C, C++), flang 21.1.8 (Fortran)
+clang 21.2.0 (C, C++), flang 21.2.0 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
 
 configured with --without-lapack and config.site:
+CC=clang-22
+CXX="clang++-22 -stdlib=libc++"
+OBJC=$CC
+FC=flang-22
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
 CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
-CPPFLAGS="-isystem /usr/local/clang19/include -I/usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang21/lib -L/usr/local/clang21/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
+CPPFLAGS="-isystem /usr/local/clang22/include -I/usr/local/clang/include"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang22/lib -L/usr/local/clang22/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 
-clang was built to use libc++: for a version built to default to libstdc++
-(as shipped by Fedora/Debian/Ubuntu), add -stdlib=libc++ to CXX 
-and install the libcxx-devel/libc++-dev package.
-
-For soures and some binary distrobutions see 
+For sources and some binary distrobutions see 
 https://github.com/llvm/llvm-project/releases/
-Built via
-
-tar cf lvmorg-21.1.x/llvm-project-21.1.x.src.tar.xz
-ln -s  llvm-project-21.1.x.src latest
-mkdir build
-cd build
-cmake -G "Unix Makefiles" \
--DCMAKE_INSTALL_PREFIX=/usr/local/clang20 \
--DCMAKE_BUILD_TYPE:STRING=Release \
--DLLVM_ENABLE_ASSERTIONS:BOOL=OFF \
--DCMAKE_C_COMPILER=/usr/bin/clang \
--DCMAKE_CXX_COMPILER=/usr/bin/clang++ \
--DLLVM_TARGETS_TO_BUILD=X86 \
--DCLANG_DEFAULT_CXX_STDLIB=libc++ \
--DLLVM_ENABLE_PROJECTS='clang;openmp;flang' \
--DLLVM_ENABLE_RUNTIMES='libcxx;libcxxabi;libunwind,compiler-rt' \
--S ../latest/llvm
+Currently using LLVM-22.1.0-Linux-X64.tar.xz
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
