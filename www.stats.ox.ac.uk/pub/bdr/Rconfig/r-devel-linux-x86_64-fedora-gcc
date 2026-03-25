@@ -33,19 +33,17 @@ This uses the system LAPACK, which is currently 3.12.0.
 
 Java 25 is used.
 
-pandoc 3.9 from pandoc's binary distribution is used: Fedora's 3.1.11.1
+pandoc 3.9.0.2 from pandoc's binary distribution is used: Fedora's 3.1.11.1
 is far too old.
 
 ghostscript is 10.5.1 from Fedora
 
-A local TexLive is used, updated nightly, currently 2025.
+A local TexLive is used, updated nightly, currently 202r65.
 
 JAGS-4.3.2 was installed from source.
 TkTable 2.12 was installed from source.
 QuantLib is 1.37 installed from source: F40's 1.29 is rather old.
-
-[For former package BRugs: OpenBUGS-3.2.3 was installed using 
-Fedora's i686 toolchain.]
+'mark' is installed, for Rmark. (from http://www.phidot.org/software/mark/rmark/linux/, when that responds)
 
 This is currently using the environment variables
 

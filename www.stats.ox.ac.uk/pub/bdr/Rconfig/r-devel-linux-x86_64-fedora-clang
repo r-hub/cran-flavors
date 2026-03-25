@@ -43,7 +43,7 @@ Fedora 42 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
-pandoc 3.9 from pandoc's binary distribution is used: Fedora's 3.1.11.1
+pandoc 3.9.0.2 from pandoc's binary distribution is used: Fedora's 3.1.11.1
 is far too old.
 
 ghostscript is 10.05.1 from Fedora.
@@ -54,6 +54,9 @@ the environment variable DOWNLOAD_STATIC_LIBV8=1.
 JAGS-4.3.2 was installed from source.
 
 TkTable 2.12 was installed from source.
+
+'mark' is installed, for Rmark. (from http://www.phidot.org/software/mark/rmark/linux/, when that responds)
+
 
 This is currently using the environment variables
 
