@@ -1,7 +1,7 @@
 
 R-devel
 x86_64 Fedora 42 Linux
-clang 21.1.2 (C, C++), flang 21.1.2 (Fortran)
+clang 22.1.2 (C, C++), flang 22.1.2 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
