@@ -1,7 +1,7 @@
 
 R-devel
 x86_64 Fedora 42 Linux
-clang 22.1.3 (C, C++), flang 22.1.3 (Fortran)
+clang 22.1.4 (C, C++), flang 22.1.4 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -20,7 +20,7 @@ LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang22/lib -L/usr/local/clang22/
 
 For sources and some binary distrobutions see 
 https://github.com/llvm/llvm-project/releases/
-Currently using LLVM-22.1.3-Linux-X64.tar.xz
+Currently using LLVM-22.1.4-Linux-X64.tar.xz
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
