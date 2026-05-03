@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-26.4.1 'Tahoe' with Xcode/CLT 26.5beta 2 (hence Apple clang 21) and
+26.4.1 'Tahoe' with Xcode/CLT 26.5 beta 3 (hence Apple clang 21) and
 the build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
@@ -39,7 +39,7 @@ modifications to Simon Urbanek's 'recipes' at
 https://github.com/R-macos/recipes .  The main exceptions are those
 which need to use dynamic libraries (such as openmpi and libmariadb).
 
-Currently this uses PROJ 9.8.0, GEOS 3.14.1, GDAL 3.12.3.  (GDAL needs
+Currently this uses PROJ 9.8.1, GEOS 3.14.1, GDAL 3.12.4.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
 
 Apple provides iODBC libraries but no longer ships the headers, which
@@ -84,7 +84,8 @@ this may differ from the CRAN checks:
     accepting -std=gnu23.
 - External software is (mainly) kept up-to-date -- see above.
     This includes Java 25 and cmake, currently 4.3.2.
-    OpenMPI is installed for Rmpi, bigGP, pbdMPI and pbdSLAP, currently 5.0.8.
+    OpenMPI is installed for Rmpi, bigGP, npRmpi, pbdMPI and pbdSLAP,
+    currently 5.0.10.
 - Package INLA is installed -- requires a binary install on Macs.
 - Recently some CRAN M1 checks have OpenMP enabled, which is
    OS-version-specific (and not done for the Intel checks).
