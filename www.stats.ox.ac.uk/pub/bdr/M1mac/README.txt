@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 ('M1 Pro') Mac running macOS
-26.4.1 'Tahoe' with Xcode/CLT 26.5 beta 3 (hence Apple clang 21) and
+26.4.1 'Tahoe' with Xcode/CLT 26.4.1 (hence Apple clang 21) and
 the build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
@@ -38,6 +38,9 @@ External libraries are where possible installed via minor
 modifications to Simon Urbanek's 'recipes' at
 https://github.com/R-macos/recipes .  The main exceptions are those
 which need to use dynamic libraries (such as openmpi and libmariadb).
+Some have been rebuilt to later versions, including
+
+geos proj symphony
 
 Currently this uses PROJ 9.8.1, GEOS 3.14.1, GDAL 3.12.4.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
@@ -52,7 +55,7 @@ should continue to work.)
 
 pandoc is their binary arm64 Mac build, currently 3.9.0.2 (and updated often).
 
-Java is 25.0.2 from https://adoptium.net
+Java is 25.0.3 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
