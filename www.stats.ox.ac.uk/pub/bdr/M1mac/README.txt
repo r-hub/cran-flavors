@@ -63,8 +63,6 @@ https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
 ghoatscript is 10.06.0 from MacTeX 2026, which provides the TeX
 installation.
 
-NLopt was updated to the current 2.10.0 (from 2.7.1 used for CRAN checks).
-
 There is a testing service for the CRAN M1mac setup at
 https://mac.r-project.org/macbuilder/submit.html .  Some ways in which
 this may differ from the CRAN checks:
