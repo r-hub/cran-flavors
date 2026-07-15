@@ -1,3 +1,4 @@
+[2026-07-15: migration to Fedora 44 in progress.]
 
 R-devel
 x86_64 Fedora 42 Linux
@@ -37,16 +38,16 @@ Installing recent poppler failed: it attempts to use gcc for part of the install
 
 gdal 3.11.5 compiled from source, skipping poppler.
 
-A local TexLive is used, updated nightly, currently 2025.
+A local TexLive is used, updated nightly, currently 2026.
 
 Fedora 42 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
-pandoc 3.10 from pandoc's binary distribution is used: Fedora's 3.1.11.1
-is far too old.
+pandoc 3.10 from pandoc's binary distribution is used: Fedora's 3.7.0.2
+is too old.
 
-ghostscript is 10.05.1 from Fedora.
+ghostscript is 10.06.0 from Fedora.
 
 V8 was installed using the static library it makes available via
 the environment variable DOWNLOAD_STATIC_LIBV8=1.

@@ -1,10 +1,6 @@
-[2024-02-20: this will shortly move to a snapshot og GGC 16.
-Details and results for packages with compiled code can be seen at
-https://www.stats.ox.ac.uk/pub/bdr/gcc16/ ]
-
 R-devel
-x86_64 Fedora 42 Linux
-GCC 15.1.1 (C, C++, Fortran) from Fedora
+x86_64 Fedora 44 Linux
+GCC 16.1.1 (C, C++, Fortran) from Fedora
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -14,7 +10,7 @@ CFLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORT
 C17FLAGS="-g -O2 -Wall -pedantic -mtune=native -Werror=format-security -Wp,-D_FORTIFY_SOURCE=3 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection -Werror=implicit-function-declaration"
 FFLAGS="-g -O2 -mtune=native -Wall -pedantic"
 CXXFLAGS="-g -O2 -Wall -pedantic -mtune=native -Wno-ignored-attributes -Wno-parentheses -Werror=format-security -Wp,-D_FORTIFY_SOURCE=3 -fexceptions -fstack-protector-strong -fstack-clash-protection -fcf-protection"
-JAVA_HOME=/usr/lib/jvm/java-21
+JAVA_HOME=/usr/lib/jvm/java-25
 AR=gcc-ar
 RANLIB=gcc-ranlib
 LTO=-flto=10
@@ -27,18 +23,18 @@ gives stricter C99 compliance as used by macOS.
 The LTO flags mean that R and recomended packages are built with LTO and
 are slightly smaller and faster.
 
-Fedora 42 defaults to Tcl/Tk 9.
+Fedora 44 defaults to Tcl/Tk 9.
 
 This uses the system LAPACK, which is currently 3.12.0.
 
 Java 25 is used.
 
-pandoc 3.10 from pandoc's binary distribution is used: Fedora's 3.1.11.1
-is far too old.
+pandoc 3.10 from pandoc's binary distribution is used: Fedora's 3.7.0.2
+is too old.
 
-ghostscript is 10.5.1 from Fedora
+ghostscript is 10.6.0 from Fedora
 
-A local TexLive is used, updated nightly, currently 202r65.
+A local TexLive is used, updated nightly, currently 2026.
 
 JAGS-4.3.2 was installed from source.
 TkTable 2.12 was installed from source.
