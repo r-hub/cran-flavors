@@ -11,6 +11,8 @@ MKL:
 Intel MKL '2023.2.0' used to build Rblas and also provides LAPACK
 (which is version 3.10.1).  R was configured by (csh script)
 
+Recent/future checkes are with version 2026.1.0, which reports LAPACK 3.12.1.
+
 setenv MKL_LIB_PATH /usr/local/MKL/mkl/lib/intel64
 setenv LD_LIBRARY_PATH $MKL_LIB_PATH
 setenv MKL "-L$MKL_LIB_PATH -lmkl_gf_lp64 -lmkl_core -lmkl_sequential"
