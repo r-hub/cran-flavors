@@ -34,13 +34,11 @@ but subject to change.  Other C++ libraries, e.g.
 
 can use the system builds.
 
-Installing recent poppler failed: it attempts to use gcc for part of the installation.
-
-gdal 3.11.5 compiled from source, skipping poppler.
+gdal 3.11.5 compiled from source.
 
 A local TexLive is used, updated nightly, currently 2026.
 
-Fedora 42 defaults to Tcl/Tk 9.
+Fedora 44 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
