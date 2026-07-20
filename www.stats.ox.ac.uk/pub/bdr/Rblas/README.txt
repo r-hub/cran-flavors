@@ -8,10 +8,12 @@ libRblas.so was replaced by a symlink to /usr/lib64/atlas/libsatlas.so .
 It reports using LAPACK 3.12.0.
 
 MKL:
-Intel MKL '2023.2.0' used to build Rblas and also provides LAPACK
-(which is version 3.10.1).  R was configured by (csh script)
+Serial Intel MKL 2026.1.0, which reports LAPACK 3.12.1.
 
-Recent/future checkes are with version 2026.1.0, which reports LAPACK 3.12.1.
+Older checks used Intel MKL '2023.2.0' used to build Rblas and
+also provides LAPACK (which is version 3.10.1).
+
+R was configured by (csh script)
 
 setenv MKL_LIB_PATH /usr/local/MKL/mkl/lib/intel64
 setenv LD_LIBRARY_PATH $MKL_LIB_PATH
