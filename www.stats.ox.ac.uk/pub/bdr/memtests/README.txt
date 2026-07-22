@@ -1,7 +1,7 @@
 Tests of memory access errors, on x86_64 Linux
 ==============================================
 
-(Currently using Fedora 42.)
+(Currently using Fedora 44.)
 
 There is a directory for each package with a 00check.log file documenting the
 package version and the version of R used.  For {gcc,clang}-ASAN this may
@@ -14,8 +14,8 @@ versions of the compilers.
 
 
 clang-ASAN
-Using clang 21 built with libc++/libc++abi as the default C++ library,
-and flang 21 as the Fortran compiler. Note that the latter does
+Using clang 22 built with libc++/libc++abi as the default C++ library,
+and flang 22 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -44,8 +44,8 @@ so is no longer used.]
 buffere overflows etc in those revdeps.]
 
 clang-UBSAN:
-Using clang 21 built with libc++/libc++abi as the default C++ library,
-and flang 21 as the Fortran compiler. Note that the latter does
+Using clang 22 built with libc++/libc++abi as the default C++ library,
+and flang 22 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -55,7 +55,7 @@ R_MAKEVARS_USER pointing to a file containing
 
 CC=/usr/local/clang19/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
 CXX=/usr/local/clang19/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
-UBSAN_DIR = /usr/local/clang20/lib/clang/20/lib/x86_64-unknown-linux-gnu
+UBSAN_DIR = /usr/local/clang22/lib/clang/22/lib/x86_64-unknown-linux-gnu
 SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
 as discussed in 'Writing R Extensions'.
@@ -63,7 +63,7 @@ as discussed in 'Writing R Extensions'.
 [2024-12-23: selected revdeps are installed with UBSAN.]
 
 gcc-ASAN, gcc-UBSAN:
-gcc 15.1 with config.site:
+gcc 16.1 with config.site:
 CC="gcc -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CXX="g++ -fsanitize=address,undefined,bounds-strict -fno-omit-frame-pointer"
 CFLAGS="-g -O2 -Wall -pedantic -mtune=native -fsanitize=address -Wno-stringop-truncation  -Wno-alloc-size-larger-than"
@@ -97,7 +97,7 @@ setenv R_DONT_USE_TK true
 
 valgrind:
 Running R CMD check --use-valgrind with an instrumented (level 2) build of R,
-currently using valgrind 3.24.0 on Fedora 40.
+currently using valgrind 3.17.1, formerly using valgrind 3.24.0 on Fedora 40.
 
 configured by:
 .../configure -C --with-valgrind-instrumentation=2
