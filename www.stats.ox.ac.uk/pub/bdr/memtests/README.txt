@@ -97,7 +97,7 @@ setenv R_DONT_USE_TK true
 
 valgrind:
 Running R CMD check --use-valgrind with an instrumented (level 2) build of R,
-currently using valgrind 3.17.1, formerly using valgrind 3.24.0 on Fedora 40.
+currently using valgrind 3.27.1, formerly using valgrind 3.24.0 on Fedora 40.
 
 configured by:
 .../configure -C --with-valgrind-instrumentation=2
@@ -114,23 +114,10 @@ and environment variables
 setenv RJAVA_JVM_STACK_WORKAROUND 0
 setenv R_DONT_USE_TK true
 
-The following valgrind suppression file is used:
+Packafes using MPI are skipped, as there are many valgrind warnings on
+MPI code.  Also packaide proj4.
 
-{
-   Suppression for wcsrtombs
-   Memcheck:Cond
-   fun:__wcsnlen_sse4_1
-   fun:wcsrtombs
-   fun:wcstombs
-}
-
-{
-   Suppression for do_makename
-   Memcheck:Addr16
-   fun:__wcsnlen_sse4_1
-   fun:wcsrtombs
-   fun:wcstombs
-}
+------------------
 
 NB: there are  ASAN/UBSAN results for macOS at
 https://www.stats.ox.ac.uk/pub/bdr/M1-SAN/
