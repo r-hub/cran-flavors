@@ -1,7 +1,5 @@
-[2026-07-15: migration to Fedora 44 in progress.]
-
 R-devel
-x86_64 Fedora 42 Linux
+x86_64 Fedora 44 Linux
 clang 22.1.8 (C, C++), flang 22.1.8 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
@@ -9,7 +7,7 @@ Locale en_GB.UTF-8, LC_COLLATE=C
 
 configured with --without-lapack and config.site:
 CC=clang-22
-CXX="clang++-22 -stdlib=libc++"
+CXX=clang++-22
 OBJC=$CC
 FC=flang-22
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
@@ -21,7 +19,6 @@ LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang22/lib -L/usr/local/clang22/
 
 For sources and some binary distrobutions see 
 https://github.com/llvm/llvm-project/releases/
-Currently using LLVM-22.1.8-Linux-X64.tar.xz
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
@@ -34,7 +31,7 @@ but subject to change.  Other C++ libraries, e.g.
 
 can use the system builds.
 
-gdal 3.11.5 compiled from source.
+gdal 3.12.4 compiled from source.
 
 A local TexLive is used, updated nightly, currently 2026.
 
