@@ -40,6 +40,7 @@ JAGS-4.3.2 was installed from source.
 TkTable 2.12 was installed from source.
 QuantLib is 1.37 installed from source: F40's 1.29 is rather old.
 'mark' is installed, for Rmark. (from http://www.phidot.org/software/mark/rmark/linux/, when that responds)
+Fedora no longer provides SYMPHONY, so this was compiled from source.
 
 This is currently using the environment variables
 
