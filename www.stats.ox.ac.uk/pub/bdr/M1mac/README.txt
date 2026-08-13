@@ -55,7 +55,7 @@ should continue to work.)
 
 pandoc is their binary arm64 Mac build, currently 3.10.1 (and updated often).
 
-Java is 25.0.3 from https://adoptium.net
+Java is 25.0.4 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
