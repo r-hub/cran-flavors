@@ -1,3 +1,10 @@
+[2026-08-26 transitioning to LLVM 23.1.0 with
+
+CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw -D_LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23"
+
+See also the clang23 additional issee and
+https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt]
+
 R-devel
 x86_64 Fedora 44 Linux
 clang 22.1.8 (C, C++), flang 22.1.8 (Fortran)
