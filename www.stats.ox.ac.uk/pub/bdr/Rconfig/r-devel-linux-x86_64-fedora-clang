@@ -1,34 +1,31 @@
-[2026-08-26 transitioning to LLVM 23.1.0 with
-
-CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw -D_LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23"
-
+[2026-08-26 transitioning to LLVM 23.1.0. 
 See also the clang23 additional issee and
 https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt]
 
 R-devel
 x86_64 Fedora 44 Linux
-clang 22.1.8 (C, C++), flang 22.1.8 (Fortran)
+clang 23.1.0 (C, C++), flang 23.1.0 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
 R configured with --without-lapack and config.site:
-CC=clang-22
-CXX=clang++-22
+CC=clang-23
+CXX=clang++-23
 OBJC=$CC
-FC=flang-22
+FC=flang-23
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
-CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
+CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw -D_LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23"
 CPPFLAGS="-isystem /usr/local/clang22/include -I/usr/local/clang/include"
-LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang22/lib -L/usr/local/clang22/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
+LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang23/lib -L/usr/local/clang23/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 
 LLVM was built from source and configured to defatult to libc++
 For sources and some binary distrobutions see 
 https://github.com/llvm/llvm-project/releases/
 To use a binary distribution from LLVM, Fedora, Debian etc use
 
-CXX="clang++-22 -stdlib=libc++"
+CXX="clang++- -stdlib=libc++"
 
 Some external C++ libraries compiled with clang/libc++ are installed under
 /usr/local/clang.  Currently
