@@ -3,11 +3,20 @@ implementations.  Except as noted below, R was configured as per
 https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-gcc
 
 ATLAS:
+(<https://en.wikipedia.org/wiki/Automatically_Tuned_Linear_Algebra_Software>,
+last updated 2026-07)
 Serial ATLAS using the Fedora shared libraries. (Currently version 3.10.3.)
 libRblas.so was replaced by a symlink to /usr/lib64/atlas/libsatlas.so .
 It reports using LAPACK 3.12.0.
 
+BLIS:
+(<https://en.wikipedia.org/wiki/BLIS_(software)>)
+Serial BLIS using the Fedora shared libraries. (Currently version 2.0-5)
+libRblas.so was replaced by a symlink to /usr/lib64/libblis.so.4
+It reports using the system LAPACK 3.12.0.
+
 MKL:
+(<https://en.wikipedia.org/wiki/Math_Kernel_Library>)
 Serial Intel MKL 2026.1.0, which reports LAPACK 3.12.1.
 
 Older checks used Intel MKL '2023.2.0' used to build Rblas and
@@ -21,12 +30,8 @@ setenv MKL "-L$MKL_LIB_PATH -lmkl_gf_lp64 -lmkl_core -lmkl_sequential"
 ~/R/svn/R-devel/configure -C --with-blas="$MKL" --with-lapack --enable-lto=R
 
 OpenBLAS:
-
+(<https://en.wikipedia.org/wiki/OpenBLAS>)
 Serial OpenBLAS using the Fedora shared libraries (currently version 0.3.29).
 libRblas.so was replaced by a symlink to /usr/lib64/libopenblas.so (part of
 openblas-devel, linked from openblas-serial). This reports using LAPACK 3.12.0.
-
-Pto tem, using
-
-setenv _R_CHECK_MBCS_CONVERSION_FAILURE_ true
 
