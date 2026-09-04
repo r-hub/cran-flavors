@@ -46,7 +46,7 @@ Fedora 44 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
-pandoc 3.10.2 from pandoc's binary distribution is used: Fedora's 3.7.0.2
+pandoc 3.11 from pandoc's binary distribution is used: Fedora's 3.7.0.2
 is too old.
 
 ghostscript is 10.06.0 from Fedora.

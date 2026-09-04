@@ -56,7 +56,7 @@ https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
 
 should continue to work.)
 
-pandoc is their binary arm64 Mac build, currently 3.10.2 (and updated often).
+pandoc is their binary arm64 Mac build, currently 3.11 (and updated often).
 
 Java is 25.0.4 from https://adoptium.net
 
@@ -99,8 +99,8 @@ this may differ from the CRAN checks:
 Packages with non-default installs:
 
 sf: --configure-args='--with-data-copy'
-terra: --configure-args='--with-data-copy'
-vapour: --configure-args='--with-data-copy'
+
+and for gdalcubes gdalraster terra vapour vol2birdR
 
 Options used for 'R CMD check':
 
