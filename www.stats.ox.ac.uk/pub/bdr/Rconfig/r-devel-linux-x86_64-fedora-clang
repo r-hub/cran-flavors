@@ -1,10 +1,10 @@
-[2026-08-26 transitioning to LLVM 23.1.0. 
+[2026-08-26 changed to LLVM 23.
 See also the clang23 additional issee and
 https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt]
 
 R-devel
 x86_64 Fedora 44 Linux
-clang 23.1.0 (C, C++), flang 23.1.0 (Fortran)
+clang 23.1.1 (C, C++), flang 23.1.1 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
