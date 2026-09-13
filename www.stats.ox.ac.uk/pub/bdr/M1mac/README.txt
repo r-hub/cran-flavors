@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 Mac running macOS
-26.6.2 'Tahoe' with Xcode/CLT 26.6 (hence Apple clang 21) and
+26.6.2 'Tahoe' with Xcode/CLT 27RC (hence Apple clang 21) and
 the build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
@@ -7,7 +7,7 @@ https://github.com/R-macos/gcc-14-branch/releases)
 clang corresponds to LLVM clang 21.1.6, but the correspondence seems loose.]
 
 Historically these checks were first done in 2020 on M1 MBA and since
-2021-11 on an M1 Pro MBP.  Since 2026-08, on an 18-core M5 Pro MBP.
+2021-11 on an M1 Pro MBP.  Since 2026-09, on an 18-core M5 Pro MBP.
 
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
@@ -54,7 +54,12 @@ not changed for many years, so for example
 
 https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
 
-should continue to work.)
+should continue to work.)  However, it seems macOS 27 has removed the
+iODBC libraries, but iODBC can be installed from
+
+https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
+
+Or unixODBC could be used (available as a recipe).
 
 pandoc is their binary arm64 Mac build, currently 3.11 (and updated often).
 
