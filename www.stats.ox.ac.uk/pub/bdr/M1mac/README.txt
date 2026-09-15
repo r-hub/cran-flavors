@@ -1,6 +1,6 @@
-Check results using R-devel on an arm64 Mac running macOS
-26.6.2 'Tahoe' with Xcode/CLT 27RC (hence Apple clang 21) and
-the build of gfortran (a fork of 14.2) from
+Check results using R-devel on an arm64 Mac running macOS 27.0 'Golden
+Gate' with Xcode/CLT 27 (hence Apple clang 21) and the build of
+gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
 [According to https://en.wikipedia.org/wiki/Xcode that version of Apple
@@ -48,14 +48,17 @@ geos proj symphony
 Currently this uses PROJ 9.8.1, GEOS 3.15.0, GDAL 3.13.3.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
 
-Apple provides iODBC libraries but no longer ships the headers, which
-can be found via https://opensource.apple.com/releases/ .  (They have
-not changed for many years, so for example
+Prior to macOS 27 Apple provided iODBC libraries but no longer shipped
+the headers, which can be found via
+https://opensource.apple.com/releases/ .  (They have not changed for
+many years, so for example
 
 https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
 
-should continue to work.)  However, it seems macOS 27 has removed the
-iODBC libraries, but iODBC can be installed from
+continued to work.)
+
+However, it seems macOS 27 removed the iODBC libraries, but iODBC
+can be installed from
 
 https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
 
