@@ -1,5 +1,5 @@
-Check results using R-devel on an arm64 Mac running macOS 27.0 'Golden
-Gate' with Xcode/CLT 27 (hence Apple clang 21) and the build of
+Check results using R-devel on an arm64 Mac running macOS 27.0.1 'Golden
+Gate' with Xcode/CLT 27.2 beta 2 (hence Apple clang 21) and the build of
 gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
 
@@ -7,7 +7,7 @@ https://github.com/R-macos/gcc-14-branch/releases)
 clang corresponds to LLVM clang 21.1.6, but the correspondence seems loose.]
 
 Historically these checks were first done in 2020 on M1 MBA and since
-2021-11 on an M1 Pro MBP.  Since 2026-09, on an 18-core M5 Pro MBP.
+2021-11 on an M1 Pro MBP.  Since 2026-10, on an 18-core M5 Pro MBP.
 
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
@@ -57,7 +57,7 @@ https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
 
 continued to work.)
 
-However, it seems macOS 27 removed the iODBC libraries, but iODBC
+However,  macOS 27 removed the iODBC libraries, but iODBC
 can be installed from
 
 https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
@@ -66,7 +66,7 @@ Or unixODBC could be used (available as a recipe).
 
 pandoc is their binary arm64 Mac build, currently 3.11 (and updated often).
 
-Java is 25.0.4 from https://adoptium.net
+Java is 25.0.4.1 from https://adoptium.net
 
 JAGS is a binary install from 
 https://sourceforge.net/projects/mcmc-jags/files/JAGS/4.x/Mac%20OS%20X/
@@ -83,7 +83,7 @@ this may differ from the CRAN checks:
 - OS and Command Line Tools are kept up-to-date.
    (According to https://cran.r-project.org/web/checks/check_flavors.html
    the CRAN check service for 'r-release' is running macOS 15.7.1 and
-   Apple clang 17.0.0, whereas the 'r-oldrelease' checks use maxOS 13.4 and
+   Apple clang 17.0.0, whereas the 'r-oldrelease' checks use macOS 13.4 and
    Apple clang 14.0.0.)
 - The TeX installation (MacTeX, currently 2026) is updated daily.
   Apparently the CRAN checks use TinyTex.
