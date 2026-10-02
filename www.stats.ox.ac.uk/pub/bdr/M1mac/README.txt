@@ -37,15 +37,16 @@ and configured with
 --without-lapack \
 PKG_CONFIG_PATH=/opt/R/arm64/lib/pkgconfig:/usr/lib/pkgconfig
 
-External libraries are where possible installed via minor
-modifications to Simon Urbanek's 'recipes' at
-https://github.com/R-macos/recipes .  The main exceptions are those
-which need to use dynamic libraries (such as openmpi and libmariadb).
-Some have been rebuilt to later versions, including
+External libraries are downloaded from
+https://mac.r-project.org/bin/darwin23/arm64/
+or where possible installed via minor modifications to Simon Urbanek's
+'recipes' at https://github.com/R-macos/recipes .  The main exceptions
+are those which need to use dynamic libraries (such as openmpi and
+libmariadb).  Some have been rebuilt to later versions, including
 
 geos proj symphony
 
-Currently this uses PROJ 9.8.1, GEOS 3.15.0, GDAL 3.13.3.  (GDAL needs
+Currently this uses PROJ 9.9.0, GEOS 3.15.0, GDAL 3.13.3.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
 
 Prior to macOS 27 Apple provided iODBC libraries but no longer shipped
@@ -64,7 +65,7 @@ https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
 
 Or unixODBC could be used (available as a recipe).
 
-pandoc is their binary arm64 Mac build, currently 3.11 (and updated often).
+pandoc is their binary arm64 Mac build, currently 3.12 (and updated often).
 
 Java is 25.0.4.1 from https://adoptium.net
 
