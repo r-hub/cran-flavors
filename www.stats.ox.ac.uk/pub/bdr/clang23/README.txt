@@ -1,10 +1,12 @@
-Checks using LLVM 23.1.0, released 2026-08-25.
+Checks using LLVM 23.1.x, released 2026-08-25.
 
 Other details as https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang.
 
 The fedora-clang checks differ only in that 
 _LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23 
 is defined in CXXFLAGS.
+
+[That will be removed shortly.
 
 Release notes are available at
 
@@ -33,5 +35,5 @@ People writing C and calling it C++ need to include headers such as
 This is about libc++: some people build clang++ to by default link to
 GCC's libstdc++, which has a compltely separate set of C++ headers.
 
-LLVM provides some binary builds (those for -rc3 suffice) at
+LLVM provides some binary builds at
  https://github.com/llvm/llvm-project/releases
