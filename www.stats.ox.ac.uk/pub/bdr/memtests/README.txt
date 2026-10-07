@@ -14,8 +14,8 @@ versions of the compilers.
 
 
 clang-ASAN
-Using clang 22 built with libc++/libc++abi as the default C++ library,
-and flang 22 as the Fortran compiler. Note that the latter does
+Using clang 23 built with libc++/libc++abi as the default C++ library,
+and flang 23 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -44,8 +44,8 @@ so is no longer used.]
 buffere overflows etc in those revdeps.]
 
 clang-UBSAN:
-Using clang 22 built with libc++/libc++abi as the default C++ library,
-and flang 22 as the Fortran compiler. Note that the latter does
+Using clang 23 built with libc++/libc++abi as the default C++ library,
+and flang 23 as the Fortran compiler. Note that the latter does
 not yet support sanitizers.
 [For a version built to default to libstdc++ (as shipped by Debian/Ubuntu),
 add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
@@ -53,9 +53,9 @@ add -stdlib=libc++ to the CXX line and install the libc++-dev package.]
 An unaltered build of R was used, but each package was tested with 
 R_MAKEVARS_USER pointing to a file containing
 
-CC=/usr/local/clang19/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
-CXX=/usr/local/clang19/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
-UBSAN_DIR = /usr/local/clang22/lib/clang/22/lib/x86_64-unknown-linux-gnu
+CC=/usr/local/clang23/bin/clang -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer
+CXX=/usr/local/clang23/bin/clang++ -fsanitize=undefined -fno-sanitize=function -fno-omit-frame-pointer -frtti
+UBSAN_DIR = /usr/local/clang23/lib/clang/23/lib/x86_64-unknown-linux-gnu
 SAN_LIBS = -L$(UBSAN_DIR) -Wl,-rpath,$(UBSAN_DIR) -lclang_rt.ubsan_standalone
 
 as discussed in 'Writing R Extensions'.

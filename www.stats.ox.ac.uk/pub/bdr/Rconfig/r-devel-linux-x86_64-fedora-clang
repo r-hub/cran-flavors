@@ -1,6 +1,9 @@
 [2026-08-26 changed to LLVM 23.
-See also the clang23 additional issee and
-https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt]
+See also the clang23 additional issue and
+https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt
+
+2026-10-07: removed the _LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23 
+workaround.]
 
 R-devel
 x86_64 Fedora 44 Linux
@@ -16,7 +19,7 @@ FC=flang-23
 CFLAGS="-O3 -Wall -pedantic -Wp,-D_FORTIFY_SOURCE=3"
 C17FLAGS="-O3 -Wall -pedantic -Wno-strict-prototypes -Wp,-D_FORTIFY_SOURCE=3"
 FFLAGS="-O2 -pedantic"
-CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw -D_LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23"
+CXXFLAGS="-O3 -Wall -pedantic -frtti -Wp,-D_FORTIFY_SOURCE=3 -Wno-missing-template-arg-list-after-template-kw"
 CPPFLAGS="-isystem /usr/local/clang22/include -I/usr/local/clang/include"
 LDFLAGS="-L/usr/local/clang/lib64 -L/usr/local/clang23/lib -L/usr/local/clang23/lib/x86_64-unknown-linux-gnu -L/usr/local/lib64"
 

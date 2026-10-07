@@ -2,11 +2,12 @@ Checks using LLVM 23.1.x, released 2026-08-25.
 
 Other details as https://www.stats.ox.ac.uk/pub/bdr/Rconfig/r-devel-linux-x86_64-fedora-clang.
 
-The fedora-clang checks differ only in that 
+The fedora-clang checks differed only in that 
 _LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23 
-is defined in CXXFLAGS.
+was  defined in CXXFLAGS.
 
-[That will be removed shortly.
+Thas has now been removed, so differences from fedora-clang are
+for historical checks.
 
 Release notes are available at
 
