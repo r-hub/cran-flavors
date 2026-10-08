@@ -109,7 +109,7 @@ Packages with non-default installs:
 
 sf: --configure-args='--with-data-copy'
 
-and for gdalcubes gdalraster terra vapour vol2birdR
+and for gdalraster terra vapour vol2birdR
 
 Options used for 'R CMD check':
 
