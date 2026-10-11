@@ -20,7 +20,7 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: nonmem2rx
+Also Linux: couplr nonmem2rx
 
 Alignment:
  (Those which are 0x000000000001 are likely attempts to access an
@@ -33,11 +33,10 @@ Alignment:
 Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission mninred spRFA
 
-isopam no longer has compiled code.
-
 (reported)
+couplr fastPLS iglm nonmem2rx uqsa
 (and ignored)
-pander
+pander talib
 (repeatedly) terra 
 
 gtools, restfulr: in system socket headers.
