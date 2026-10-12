@@ -24,9 +24,10 @@ should be fixable by including the correct header. To ease the transition
 _LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23 can be defined, which includes
 the removed headers again. This macro will be removed in LLVM 24."
 
-So if declaration(s) (especially in std:) are reported as missing, do ensure
+So if declaration(s) (especially in std::) are reported as missing, do ensure
 that the header(s) which declare them are included.  Most commonly
-<algorithm> or <iterator> is missing.  gamstranfer needed <type_traits>
+<algorithm> or <iterator> was missing.  gamstransfer needed <type_traits>.
+AV1R needed <string>.
 
 People writing C and calling it C++ need to include headers such as
 <cstdlib>, <cstddef>, <cmath> or <ctime>. These have been needed for
@@ -34,7 +35,8 @@ People writing C and calling it C++ need to include headers such as
     nullptr_t size_t fabs isnan log sqrt clock localtime time
 
 This is about libc++: some people build clang++ to by default link to
-GCC's libstdc++, which has a compltely separate set of C++ headers.
+GCC's libstdc++, which has a completely separate set of C++ headers.
 
 LLVM provides some binary builds at
- https://github.com/llvm/llvm-project/releases
+
+https://github.com/llvm/llvm-project/releases
