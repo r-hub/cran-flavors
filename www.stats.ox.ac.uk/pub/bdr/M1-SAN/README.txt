@@ -31,10 +31,10 @@ Alignment:
   standards do not seem to.)
 
 Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
-  bayestransmission mninred spRFA
+  bayestransmission iglm mninred spRFA
 
 (reported)
-couplr fastPLS iglm uqsa
+couplr fastPLS uqsa
 (and ignored)
 pander
 (repeatedly)
