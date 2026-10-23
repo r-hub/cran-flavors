@@ -20,9 +20,9 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: couplr
+Also Linux: adlaplace couplr opentimsr
 
-Alignment:
+Alignment: couplr opentimsr
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -30,13 +30,13 @@ Alignment:
   the 'src' pointer.  Some people claim
   (e.g. https://en.cppreference.com/cpp/string/byte/memcpy)
   'src' must be a non-NULL and valid pointer, but the C, C++ and POSIX
-  standards do not seem to.)
+  standards do not seem to.
 
 Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission iglm mninred spRFA usqa
 
 (reported)
-couplr
+couplr opentimsr
 (and ignored)
 pander
 (repeatedly)
