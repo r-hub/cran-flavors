@@ -20,9 +20,9 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: adlaplace couplr nethist opentimsr sommer
+Also Linux: adlaplace opentimsr sommer
 
-Alignment: couplr opentimsr
+Alignment: opentimsr
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -33,10 +33,10 @@ Alignment: couplr opentimsr
   standards do not seem to.
 
 Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
-  bayestransmission iglm mninred spRFA usqa
+  bayestransmission couplr iglm mninred spRFA usqa
 
 (reported)
-adlaplace couplr nethist opentimsr sommer
+adlaplace opentimsr sommer
 (and ignored)
 pander
 (repeatedly)
