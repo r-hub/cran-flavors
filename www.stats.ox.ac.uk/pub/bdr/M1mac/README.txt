@@ -1,4 +1,4 @@
-Check results using R-devel on an arm64 Mac running macOS 27.0.1
+Check results using R-devel on an arm64 Mac running macOS 27.2
 'Golden Gate' with Xcode/CLT 27.2RC (hence Apple clang 21) and the
 build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases)
