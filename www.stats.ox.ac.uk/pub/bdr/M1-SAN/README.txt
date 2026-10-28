@@ -36,9 +36,9 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission couplr iglm mninred spRFA usqa
 
 (reported)
-opentimsr sommer
+opentimsr
 (and ignored)
-pander
+pander sommer
 (repeatedly)
 terra 
 
