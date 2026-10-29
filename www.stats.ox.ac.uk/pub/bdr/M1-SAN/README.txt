@@ -20,7 +20,7 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: opentimsr sommer
+Also Linux: dgtf opentimsr sommer
 
 Alignment: opentimsr
   Those which are 0x000000000001 are likely attempts to access an
@@ -36,7 +36,7 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission couplr iglm mninred spRFA usqa
 
 (reported)
-opentimsr
+dgtf opentimsr
 (and ignored)
 pander sommer
 (repeatedly)
