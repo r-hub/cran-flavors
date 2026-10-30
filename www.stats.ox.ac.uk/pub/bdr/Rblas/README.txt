@@ -14,6 +14,7 @@ Serial Intel MKL 2026.2.0, which reports LAPACK 3.12.1.
 
 Older checks (before 2026-07) used Intel MKL '2023.2.0',
 used to build Rblas and also provided LAPACK version 3.10.1.
+Those in mid-2026 used 2026.1.0.
 
 R was configured by (csh script)
 
