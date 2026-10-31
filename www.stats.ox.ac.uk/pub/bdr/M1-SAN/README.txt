@@ -22,7 +22,7 @@ Per-package notes
 
 Also Linux: dgtf opentimsr sommer
 
-Alignment: opentimsr
+Alignment: glyparse opentimsr
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -36,7 +36,7 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission couplr iglm mninred spRFA usqa
 
 (reported)
-dgtf opentimsr
+dgtf glypaarse opentimsr
 (and ignored)
 pander sommer
 (repeatedly)
