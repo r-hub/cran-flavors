@@ -1,7 +1,7 @@
 Check results using R-devel on an arm64 Mac running macOS 27.2 'Golden
 Gate' with Xcode/CLT 27.2 (hence Apple clang 21) and the build of
 gfortran (a fork of 14.2) from
-https://github.com/R-macos/gcc-14-branch/releases)
+https://github.com/R-macos/gcc-14-branch/releases
 
 [According to https://en.wikipedia.org/wiki/Xcode that version of Apple
 clang corresponds to LLVM clang 21.1.6, but the correspondence seems loose.]
@@ -65,7 +65,7 @@ https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
 
 Or unixODBC could be used (available as a recipe).
 
-pandoc is their binary arm64 Mac build, currently 3.12 (and updated often).
+pandoc is their binary arm64 Mac build, currently 3.13 (and updated often).
 
 Java is 25.0.5 from https://adoptium.net
 
