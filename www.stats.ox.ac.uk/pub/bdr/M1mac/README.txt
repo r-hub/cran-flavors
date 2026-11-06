@@ -99,7 +99,7 @@ this may differ from the CRAN checks:
     This includes Java 25 and cmake, currently 4.4.2 (a default
     install, so not on the path).
     OpenMPI is installed for Rmpi, bigGP, npRmpi, pbdMPI and pbdSLAP,
-    currently 5.0.10.
+    currently 5.0.11.
 - Package INLA is installed -- requires a binary install on Macs.
 - Recently some CRAN arm64 checks have OpenMP enabled, which is
    OS-version-specific (and not done for the Intel checks).

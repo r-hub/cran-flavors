@@ -20,9 +20,9 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: dgtf opentimsr sommer
+Also Linux: dgtf sommer
 
-Alignment: glyparse opentimsr
+Alignment: 
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -36,7 +36,7 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission couplr iglm mninred spRFA usqa
 
 (reported)
-dgtf glypaarse opentimsr
+dgtf
 (and ignored)
 pander sommer
 (repeatedly)
