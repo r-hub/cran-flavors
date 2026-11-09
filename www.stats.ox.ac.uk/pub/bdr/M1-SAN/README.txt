@@ -22,7 +22,7 @@ Per-package notes
 
 Also Linux: dgtf sommer
 
-Alignment: 
+Alignment: dgraphs
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -33,13 +33,13 @@ Alignment:
   standards do not seem to.
 
 Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
-  bayestransmission couplr iglm mninred spRFA usqa
+  bayestransmission mninred spRFA usqa
 
 (reported)
-dgtf
+dgraphs dgtf
 (and ignored)
 pander sommer
 (repeatedly)
 terra 
 
-gtools, restfulr: in system socket headers.
+couplr, gtools, restfulr: in system socket headers.
