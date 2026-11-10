@@ -96,7 +96,7 @@ this may differ from the CRAN checks:
   Version 17.0.0 ported some changes from LLVM clang 20, including
     accepting -std=gnu23.
 - External software is (mainly) kept up-to-date -- see above.
-    This includes Java 25 and cmake, currently 4.4.2 (a default
+    This includes Java 25 and cmake, currently 4.4.5 (a default
     install, so not on the path).
     OpenMPI is installed for Rmpi, bigGP, npRmpi, pbdMPI and pbdSLAP,
     currently 5.0.11.
