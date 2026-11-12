@@ -13,7 +13,7 @@ Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
 NB: in recent macOS in that locale the am/pm indicator is "a.m."  or
-"p.m." and not AM/PM as in POSIX's C locale and English locales on
+"p.m." and not AM/PM as in POSIX's C locale and all English locales on
 most other platforms.
 
 Details as in the R-admin manual, with config.site containing

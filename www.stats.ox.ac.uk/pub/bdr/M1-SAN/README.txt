@@ -22,7 +22,7 @@ Per-package notes
 
 Also Linux: dgtf sommer
 
-Alignment: dgraphs
+Alignment: 
   Those which are 0x000000000001 are likely attempts to access an
   element of a 0-lemgth R vector.
 
@@ -36,7 +36,7 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission mninred spRFA usqa
 
 (reported)
-dgraphs dgtf
+dgtf
 (and ignored)
 pander sommer
 (repeatedly)
