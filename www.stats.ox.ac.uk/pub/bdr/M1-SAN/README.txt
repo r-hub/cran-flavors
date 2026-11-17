@@ -20,7 +20,7 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: dgtf
+Also Linux: 
 
 Alignment:
   Those which are 0x000000000001 are likely attempts to access an
@@ -36,8 +36,6 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission mninred spRFA usqa
 
 (reported)
-dgtf terra
-(and ignored)
-pander
+pander terra
 
-couplr gtools iglm restfulr: in system socket headers.
+gtools iglm restfulr: in system socket headers.
