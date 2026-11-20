@@ -1,13 +1,6 @@
-[2026-08-26 changed to LLVM 23.
-See also the clang23 additional issue and
-https://www.stats.ox.ac.uk/pub/bdr/clang23/README.txt
-
-2026-10-07: removed the _LIBCPP_KEEP_TRANSITIVE_INCLUDES_LLVM23 
-workaround.]
-
 R-devel
 x86_64 Fedora 44 Linux
-clang 23.1.5 (C, C++), flang 23.1.5 (Fortran)
+clang 23.1.6 (C, C++), flang 23.1.6 (Fortran)
 Timezone Europe/London
 Locale en_GB.UTF-8, LC_COLLATE=C
 
@@ -41,7 +34,7 @@ but subject to change.  Other C++ libraries, e.g.
 
 can use the system/gcc builds. (Currently GEOS 3.14.1 PROJ 9.8.1.)
 
-gdal 3.12.4 compiled from source.
+gdal 3.12.4 compiled from source, to match Fedora 44..
 
 A local TexLive is used, updated nightly, currently 2026.
 
@@ -49,7 +42,7 @@ Fedora 44 defaults to Tcl/Tk 9.
 
 Java 25 is used.
 
-pandoc 3.12.1 from pandoc's binary distribution is used: Fedora's 3.7.0.2
+pandoc 3.13 from pandoc's binary distribution is used: Fedora's 3.7.0.2
 is too old.
 
 ghostscript is 10.06.0 from Fedora.
