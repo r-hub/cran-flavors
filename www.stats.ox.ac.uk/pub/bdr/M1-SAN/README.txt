@@ -20,7 +20,7 @@ setenv UBSAN_OPTIONS 'print_stacktrace=1'
 Per-package notes
 -----------------
 
-Also Linux: 
+Also x86_64 Linux: heaven
 
 Alignment:
   Those which are 0x000000000001 are likely attempts to access an
@@ -36,6 +36,7 @@ Archived: CovRegRF LTRCforests RFpredInterval SlaPMEG apLCMS
   bayestransmission mninred spRFA usqa
 
 (reported)
+heaven SurfaceMesh
 pander terra
 
 gtools iglm restfulr: in system socket headers.
