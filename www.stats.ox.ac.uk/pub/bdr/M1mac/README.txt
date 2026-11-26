@@ -1,5 +1,5 @@
 Check results using R-devel on an arm64 Mac running macOS 27.2.1
-'Golden Gate' with Xcode/CLT 27.3 beta (hence Apple clang 21) and the
+'Golden Gate' with Xcode/CLT 27.3 beta 2 (hence Apple clang 21) and the
 build of gfortran (a fork of 14.2) from
 https://github.com/R-macos/gcc-14-branch/releases
 
@@ -50,19 +50,19 @@ libmariadb).  Some have been rebuilt to later versions, including
 
 geos proj symphony
 
-Currently this uses PROJ 9.9.0, GEOS 3.15.0, GDAL 3.13.3.  (GDAL needs
+Currently this uses PROJ 9.9.0, GEOS 3.15.1, GDAL 3.13.3.  (GDAL needs
 manual patching of gdal-config, so not installed via recipes.)
 
 Prior to macOS 27 Apple provided iODBC libraries but no longer shipped
 the headers, which can be found via
-https://opensource.apple.com/releases/ .  (They have not changed for
+https://opensource.apple.com/releases/ .  (They had not changed for
 many years, so for example
 
 https://github.com/apple-oss-distributions/iodbc/archive/iodbc-42.6.tar.gz
 
 continued to work.)
 
-However,  macOS 27 removed the iODBC libraries, but iODBC
+However, macOS 27 removed the iODBC libraries, but iODBC
 can be installed from
 
 https://www.iodbc.org/dataspace/doc/iodbc/wiki/iodbcWiki/Downloads
