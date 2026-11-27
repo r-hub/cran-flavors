@@ -1,3 +1,5 @@
+[From 2026-11-27, checks performed on AMD EPYC 9455 3.15GHz with 48 cores.]
+
 R-devel
 x86_64 Fedora 44 Linux
 clang 23.1.6 (C, C++), flang 23.1.6 (Fortran)
